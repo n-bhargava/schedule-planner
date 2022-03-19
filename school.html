@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <!---<script src="js/pie.js"></script>--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    </script>
+
+
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <header class="image">
+        <a  href="https://www.fcusd.org/vdlhs">
+            <img class="img-logo" src="images/logo.jpg" alt="">
+        </a>
+    </header>
+    <header>
+        <a href="index.html" class="header-brand">SCHEDULE PLANNER</a>
+        <nav>
+            <ul>
+                <li><a>School</a></li>
+                <li><a>ECs</a></li>
+                <li><a>Other</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1 class = "invisible">VISTA DEL LAGO</h1>
+        <h1 id=welcome>BALANCE MY SCHEDULE</h1>
+        <h2 id="welcome">Welcome to Vista Del Lago's Schedule Planner!</h2>
+        <p id="instruction">This is in relation to one day. Please fill out all the fields!</p>
+        <p id="instruction">You can not pick any homework amount lower than the average minutes reported.</p>
+
+
+        <div class="container">
+            <h3>HOURS IN SCHOOL DAY</h3>
+            <div class="form-check">
+                <div class="card-school">
+                    <div class="card-body">
+                        <h4 class="card-title">School</h4>
+                        <div class="dropdown">
+                            <select name="schoolHours" id="schoolHours" >
+                                <option value=" "> </option>
+                                <option value="5.5">5.5 hours (early dismissal/late arrival)</option>
+                                <option value="7">7 hours (full day)</option>
+                            </select>
+                        </div>
+                        <span class="range-slider__wrap">
+                            <input type="range" class="range-slider-disabled range-slider--primary" id="range-slider-school" value="0" min="0" max="10" step="0.5" disabled="true">
+                            <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                                style="left:calc(0% + 10px)">
+                                <div class="range-slider__tooltip__label" id="label-school"></div>
+                                <div class="range-slider__tooltip__arrow"></div>
+                            </div>
+                        </span>
+                        <script>
+                            document.getElementById('schoolHours').onchange = getDropdownValueSchool;
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h3>HOURS ACTUALLY SPENT SLEEPING</h3>
+            <div class="form-check">
+                <div class="card-school">
+                    <div class="card-body">
+                        <h4 class="card-title">Sleep</h4>
+                        <div class="dropdown">
+                            <select name="sleepHours" id="sleepHours">
+                                <option value=" "> </option>
+                                <option value="10">10 hours</option>
+                                <option value="9">9 hours</option>
+                                <option value="8">8 hours</option>
+                            </select>
+                        </div>
+                        <span class="range-slider__wrap">
+                            <input type="range" class="range-slider-disabled range-slider--primary" id="range-slider-sleep" value="0" min="0" max="12" step="0.5" disabled="true" />                               
+                            <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                            style="left:calc(0% + 10px)">
+                                <div class="range-slider__tooltip__label" id="label-sleep"></div>
+                                <div class="range-slider__tooltip__arrow"></div>
+                            </div>
+                        </span>
+                        <script>
+                            document.getElementById('sleepHours').onchange = getDropdownValueSleep;
+                            document.getElementById('range-slider-sleep').addEventListener('input', getValueSleep);
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <h3>HOMEWORK HOURS: HARDEST CLASSES</h3>
+            <div class="form-check">
+                <div class="card-deck" style="padding-top:1%;padding-bottom:1%;">
+                    <div id = "alertSame" class="alert alert-warning alert-dismissible fade show" style = "width: 75%";>
+                        <strong>Wait!</strong> You seem to have selected the same class for two or more of your homework options!
+                    </div>
+                    <div class="card-school">
+                        <div class="card-body-homework-1">
+                            <h4 class="card-title">Class #1</h4>
+                            <div class="dropdown">
+                                <select name="homeworkHours" id="homeworkHours1">
+                                    <option value=" "> </option>
+                                    <optgroup label="------ Mathematics ------">
+                                        <option value="Advanced Algebra">Advanced Algebra</option>
+                                        <option value="AP Calculus">AP Calculus</option>
+                                        <option value="AP Statistics">AP Statistics*</option>
+                                        <option value="Integrated Math 1">Integrated Math 1</option>
+                                        <option value="Integrated Math 2">Integrated Math 2</option>
+                                        <option value="Integrated Math 3">Integrated Math 3</option>
+                                        <option value="Personal Business Finance">Personal Business Finance</option>
+                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="other math">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Science -------">
+                                        <option value="AP Biology">AP Biology*</option>
+                                        <option value="AP Chemistry">AP Chemistry</option>
+                                        <option value="AP Environmental Science">AP Environmental Science*</option>
+                                        <option value="AP Physics">AP Physics*</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Honors Biology">Honors Biology</option>
+                                        <option value="Honors Chemistry">Honors Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="other science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Social Studies -------">
+                                        <option value="AP Government">AP Government</option>
+                                        <option value="AP Human Geography">AP Human Geography</option>
+                                        <option value="AP Psychology">AP Psychology</option>
+                                        <option value="AP US History">AP US History</option>
+                                        <option value="AP World History">AP World History</option>
+                                        <option value="Government/Economics">Government/Economics</option>
+                                        <option value="US History">US History</option>
+                                        <option value="World Cultures">World Cultures</option>
+                                        <option value="World Geography">World Geography</option>
+                                        <option value="other social science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- English -------">
+                                        <option value="AP Language">AP Language*</option>
+                                        <option value="AP Literature">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
+                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
+                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
+                                        <option value="Honors English 1">Honors English 1*</option>
+                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="other english">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- World Languages -------">
+                                        <option value="AP French">AP French*</option>
+                                        <option value="AP Spanish">AP Spanish*</option>
+                                        <option value="French 1">French 1</option>
+                                        <option value="French 2">French 2</option>
+                                        <option value="French 3">French 3</option>
+                                        <option value="French 4">French 4</option>
+                                        <option value="Spanish 1">Spanish 1</option>
+                                        <option value="Spanish 2">Spanish 2</option>
+                                        <option value="Spanish 3">Spanish 3</option>
+                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="other language">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- CTE -------">
+                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                        <option value="Animation">Animation</option>
+                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
+                                        <option value="Careers with Children">Careers with Children</option>
+                                        <option value="Child Development">Child Development</option>
+                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
+                                        <option value="Human Body Systems">Human Body Systems</option>
+                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
+                                        <option value="Principles of Biomed">Principles of Biomed</option>
+                                        <option value="Principles of Engineering">Principles of Engineering</option>
+                                        <option value="Multimedia Production">Multimedia Production</option>
+                                        <option value="Video Production">Video Production</option>
+                                        <option value="other cte">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- VAPA -------">
+                                        <option value="AP Studio Art">AP Studio Art*</option>
+                                        <option value="Art and New Media">Art and New Media</option>
+                                        <option value="Ceramics">Ceramics</option>
+                                        <option value="CME">CME</option>
+                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
+                                        <option value="Fine Art Photo">Fine Art Photo</option>
+                                        <option value="Guitar">Guitar</option>
+                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="other vapa">Other</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="------- Electives -------">
+                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
+                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed">Driver’s Ed</option>
+                                        <option value="Forensics">Forensics</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Peer Leadership">Peer Leadership</option>
+                                        <option value="SAT Prep">SAT Prep</option>
+                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
+                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
+                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
+                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="other elective">Other</option>
+                                    </optgroup>
+                                    
+                                </select>
+                            </div>
+                            
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider-disabled range-slider--primary"
+                                    id="range-slider-homework-1" value="0" min="0" max="120" step="5" disabled="true" />
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-hw1"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('homeworkHours1').onchange = getDropdownValueHomework1;
+                                document.getElementById('range-slider-homework-1').addEventListener('input', getValueHomework1);
+                            </script>
+                        </div>
+                    </div>
+
+                <div class="card-school">
+                    <div class="card-body-homework-2">
+                        <h4 class="card-title">Class #2</h4>
+                        <div class="dropdown">
+                            <select name="homeworkHours" id="homeworkHours2">
+                                <option value=" "> </option>
+                                    <optgroup label="------ Mathematics ------">
+                                        <option value="Advanced Algebra">Advanced Algebra</option>
+                                        <option value="AP Calculus">AP Calculus</option>
+                                        <option value="AP Statistics">AP Statistics*</option>
+                                        <option value="Integrated Math 1">Integrated Math 1</option>
+                                        <option value="Integrated Math 2">Integrated Math 2</option>
+                                        <option value="Integrated Math 3">Integrated Math 3</option>
+                                        <option value="Personal Business Finance">Personal Business Finance</option>
+                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="other math">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Science -------">
+                                        <option value="AP Biology">AP Biology*</option>
+                                        <option value="AP Chemistry">AP Chemistry</option>
+                                        <option value="AP Environmental Science">AP Environmental Science*</option>
+                                        <option value="AP Physics">AP Physics*</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Honors Biology">Honors Biology</option>
+                                        <option value="Honors Chemistry">Honors Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="other science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Social Studies -------">
+                                        <option value="AP Government">AP Government</option>
+                                        <option value="AP Human Geography">AP Human Geography</option>
+                                        <option value="AP Psychology">AP Psychology</option>
+                                        <option value="AP US History">AP US History</option>
+                                        <option value="AP World History">AP World History</option>
+                                        <option value="Government/Economics">Government/Economics</option>
+                                        <option value="US History">US History</option>
+                                        <option value="World Cultures">World Cultures</option>
+                                        <option value="World Geography">World Geography</option>
+                                        <option value="other social science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- English -------">
+                                        <option value="AP Language">AP Language*</option>
+                                        <option value="AP Literature">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
+                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
+                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
+                                        <option value="Honors English 1">Honors English 1*</option>
+                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="other english">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- World Languages -------">
+                                        <option value="AP French">AP French*</option>
+                                        <option value="AP Spanish">AP Spanish*</option>
+                                        <option value="French 1">French 1</option>
+                                        <option value="French 2">French 2</option>
+                                        <option value="French 3">French 3</option>
+                                        <option value="French 4">French 4</option>
+                                        <option value="Spanish 1">Spanish 1</option>
+                                        <option value="Spanish 2">Spanish 2</option>
+                                        <option value="Spanish 3">Spanish 3</option>
+                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="other language">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- CTE -------">
+                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                        <option value="Animation">Animation</option>
+                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
+                                        <option value="Careers with Children">Careers with Children</option>
+                                        <option value="Child Development">Child Development</option>
+                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
+                                        <option value="Human Body Systems">Human Body Systems</option>
+                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
+                                        <option value="Principles of Biomed">Principles of Biomed</option>
+                                        <option value="Principles of Engineering">Principles of Engineering</option>
+                                        <option value="Multimedia Production">Multimedia Production</option>
+                                        <option value="Video Production">Video Production</option>
+                                        <option value="other cte">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- VAPA -------">
+                                        <option value="AP Studio Art">AP Studio Art*</option>
+                                        <option value="Art and New Media">Art and New Media</option>
+                                        <option value="Ceramics">Ceramics</option>
+                                        <option value="CME">CME</option>
+                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
+                                        <option value="Fine Art Photo">Fine Art Photo</option>
+                                        <option value="Guitar">Guitar</option>
+                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="other vapa">Other</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="------- Electives -------">
+                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
+                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed">Driver’s Ed</option>
+                                        <option value="Forensics">Forensics</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Peer Leadership">Peer Leadership</option>
+                                        <option value="SAT Prep">SAT Prep</option>
+                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
+                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
+                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
+                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="other elective">Other</option>
+                                    </optgroup>
+                            </select>
+                        </div>
+                        <span class="range-slider__wrap">
+                            <input type="range" class="range-slider-disabled range-slider--primary"
+                                id="range-slider-homework-2" value="0" min="0" max="120" step="5" disabled="true" />
+                            <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                                style="left:calc(0% + 10px)">
+                                <div class="range-slider__tooltip__label" id="label-hw2"></div>
+                                <div class="range-slider__tooltip__arrow"></div>
+                            </div>
+                        </span>
+                        <script>
+                            document.getElementById('homeworkHours2').onchange = getDropdownValueHomework2;
+                            document.getElementById('range-slider-homework-2').addEventListener('input', getValueHomework2);
+                        </script>
+                    </div>
+                </div>
+
+                <div class="card-school">
+                    <div class="card-body-homework-3">
+                        <h4 class="card-title">Class #3</h4>
+                        <div class="dropdown">
+                            <select name="homeworkHours" id="homeworkHours3">
+                                <option value=" "> </option>
+                                    <optgroup label="------ Mathematics ------">
+                                        <option value="Advanced Algebra">Advanced Algebra</option>
+                                        <option value="AP Calculus">AP Calculus</option>
+                                        <option value="AP Statistics">AP Statistics*</option>
+                                        <option value="Integrated Math 1">Integrated Math 1</option>
+                                        <option value="Integrated Math 2">Integrated Math 2</option>
+                                        <option value="Integrated Math 3">Integrated Math 3</option>
+                                        <option value="Personal Business Finance">Personal Business Finance</option>
+                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="other math">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Science -------">
+                                        <option value="AP Biology">AP Biology*</option>
+                                        <option value="AP Chemistry">AP Chemistry</option>
+                                        <option value="AP Environmental Science">AP Environmental Science*</option>
+                                        <option value="AP Physics">AP Physics*</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Honors Biology">Honors Biology</option>
+                                        <option value="Honors Chemistry">Honors Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="other science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Social Studies -------">
+                                        <option value="AP Government">AP Government</option>
+                                        <option value="AP Human Geography">AP Human Geography</option>
+                                        <option value="AP Psychology">AP Psychology</option>
+                                        <option value="AP US History">AP US History</option>
+                                        <option value="AP World History">AP World History</option>
+                                        <option value="Government/Economics">Government/Economics</option>
+                                        <option value="US History">US History</option>
+                                        <option value="World Cultures">World Cultures</option>
+                                        <option value="World Geography">World Geography</option>
+                                        <option value="other social science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- English -------">
+                                        <option value="AP Language">AP Language*</option>
+                                        <option value="AP Literature">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
+                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
+                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
+                                        <option value="Honors English 1">Honors English 1*</option>
+                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="other english">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- World Languages -------">
+                                        <option value="AP French">AP French*</option>
+                                        <option value="AP Spanish">AP Spanish*</option>
+                                        <option value="French 1">French 1</option>
+                                        <option value="French 2">French 2</option>
+                                        <option value="French 3">French 3</option>
+                                        <option value="French 4">French 4</option>
+                                        <option value="Spanish 1">Spanish 1</option>
+                                        <option value="Spanish 2">Spanish 2</option>
+                                        <option value="Spanish 3">Spanish 3</option>
+                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="other language">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- CTE -------">
+                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                        <option value="Animation">Animation</option>
+                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
+                                        <option value="Careers with Children">Careers with Children</option>
+                                        <option value="Child Development">Child Development</option>
+                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
+                                        <option value="Human Body Systems">Human Body Systems</option>
+                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
+                                        <option value="Principles of Biomed">Principles of Biomed</option>
+                                        <option value="Principles of Engineering">Principles of Engineering</option>
+                                        <option value="Multimedia Production">Multimedia Production</option>
+                                        <option value="Video Production">Video Production</option>
+                                        <option value="other cte">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- VAPA -------">
+                                        <option value="AP Studio Art">AP Studio Art*</option>
+                                        <option value="Art and New Media">Art and New Media</option>
+                                        <option value="Ceramics">Ceramics</option>
+                                        <option value="CME">CME</option>
+                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
+                                        <option value="Fine Art Photo">Fine Art Photo</option>
+                                        <option value="Guitar">Guitar</option>
+                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="other vapa">Other</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="------- Electives -------">
+                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
+                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed">Driver’s Ed</option>
+                                        <option value="Forensics">Forensics</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Peer Leadership">Peer Leadership</option>
+                                        <option value="SAT Prep">SAT Prep</option>
+                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
+                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
+                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
+                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="other elective">Other</option>
+                                    </optgroup>
+                            </select>
+                        </div>
+                        <span class="range-slider__wrap">
+                            <input type="range" class="range-slider-disabled range-slider--primary"
+                                id="range-slider-homework-3" value="0" min="0" max="120" step="5" disabled="true" />
+                            <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                                style="left:calc(0% + 10px)">
+                                <div class="range-slider__tooltip__label" id="label-hw3"></div>
+                                <div class="range-slider__tooltip__arrow"></div>
+                            </div>
+                        </span>
+                        <script>
+                            document.getElementById('homeworkHours3').onchange = getDropdownValueHomework3;
+                            document.getElementById('range-slider-homework-3').addEventListener('input', getValueHomework3);
+                        </script>
+                    </div>
+                </div>
+
+                <div class="card-school">
+                    <div class="card-body-homework-4">
+                        <h4 class="card-title">Class #4</h4>
+                        <div class="dropdown">
+                            <select name="homeworkHours" id="homeworkHours4">
+                                <option value=" "> </option>
+                                    <optgroup label="------ Mathematics ------">
+                                        <option value="Advanced Algebra">Advanced Algebra</option>
+                                        <option value="AP Calculus">AP Calculus</option>
+                                        <option value="AP Statistics">AP Statistics*</option>
+                                        <option value="Integrated Math 1">Integrated Math 1</option>
+                                        <option value="Integrated Math 2">Integrated Math 2</option>
+                                        <option value="Integrated Math 3">Integrated Math 3</option>
+                                        <option value="Personal Business Finance">Personal Business Finance</option>
+                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="other math">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Science -------">
+                                        <option value="AP Biology">AP Biology*</option>
+                                        <option value="AP Chemistry">AP Chemistry</option>
+                                        <option value="AP Environmental Science">AP Environmental Science*</option>
+                                        <option value="AP Physics">AP Physics*</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Honors Biology">Honors Biology</option>
+                                        <option value="Honors Chemistry">Honors Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="other science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- Social Studies -------">
+                                        <option value="AP Government">AP Government</option>
+                                        <option value="AP Human Geography">AP Human Geography</option>
+                                        <option value="AP Psychology">AP Psychology</option>
+                                        <option value="AP US History">AP US History</option>
+                                        <option value="AP World History">AP World History</option>
+                                        <option value="Government/Economics">Government/Economics</option>
+                                        <option value="US History">US History</option>
+                                        <option value="World Cultures">World Cultures</option>
+                                        <option value="World Geography">World Geography</option>
+                                        <option value="other social science">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- English -------">
+                                        <option value="AP Language">AP Language*</option>
+                                        <option value="AP Literature">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
+                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
+                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
+                                        <option value="Honors English 1">Honors English 1*</option>
+                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="other english">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- World Languages -------">
+                                        <option value="AP French">AP French*</option>
+                                        <option value="AP Spanish">AP Spanish*</option>
+                                        <option value="French 1">French 1</option>
+                                        <option value="French 2">French 2</option>
+                                        <option value="French 3">French 3</option>
+                                        <option value="French 4">French 4</option>
+                                        <option value="Spanish 1">Spanish 1</option>
+                                        <option value="Spanish 2">Spanish 2</option>
+                                        <option value="Spanish 3">Spanish 3</option>
+                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="other language">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- CTE -------">
+                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                        <option value="Animation">Animation</option>
+                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
+                                        <option value="Careers with Children">Careers with Children</option>
+                                        <option value="Child Development">Child Development</option>
+                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
+                                        <option value="Human Body Systems">Human Body Systems</option>
+                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
+                                        <option value="Principles of Biomed">Principles of Biomed</option>
+                                        <option value="Principles of Engineering">Principles of Engineering</option>
+                                        <option value="Multimedia Production">Multimedia Production</option>
+                                        <option value="Video Production">Video Production</option>
+                                        <option value="other cte">Other</option>
+                                    </optgroup>
+
+                                    <optgroup label="------- VAPA -------">
+                                        <option value="AP Studio Art">AP Studio Art*</option>
+                                        <option value="Art and New Media">Art and New Media</option>
+                                        <option value="Ceramics">Ceramics</option>
+                                        <option value="CME">CME</option>
+                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
+                                        <option value="Fine Art Photo">Fine Art Photo</option>
+                                        <option value="Guitar">Guitar</option>
+                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="other vapa">Other</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="------- Electives -------">
+                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
+                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed">Driver’s Ed</option>
+                                        <option value="Forensics">Forensics</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Peer Leadership">Peer Leadership</option>
+                                        <option value="SAT Prep">SAT Prep</option>
+                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
+                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
+                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
+                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="other elective">Other</option>
+                                    </optgroup>
+                            </select>
+                        </div>
+                        <span class="range-slider__wrap">
+                            <input type="range" class="range-slider-disabled range-slider--primary"
+                                id="range-slider-homework-4" value="0" min="0" max="120" step="5" disabled="true" />
+                            <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip--disabled"
+                                style="left:calc(0% + 10px)">
+                                <div class="range-slider__tooltip__label" id="label-hw4"></div>
+                                <div class="range-slider__tooltip__arrow"></div>
+                            </div>
+                        </span>
+                        <script>
+                            document.getElementById('homeworkHours4').onchange = getDropdownValueHomework4;
+                            document.getElementById('range-slider-homework-4').addEventListener('input', getValueHomework4);
+                        </script>
+                    </div>
+                </div>
+            </div>
+                <div>
+                    <h6><b>NOTE:</b> MHT stands for the minimum number of homework minutes required for the class. You can not select any amount of time lower than the MHT value, but if you feel you take more time with homework, feel free to pick a higher homework time value for the class!</h6>
+                </div>
+        </div>
+    </div>
+
+        <div class="container">
+            <h3>EXTRACURRICULARS</h3>
+            <div class="form-check">
+                <div class="card-deck" style="padding-top:1%;padding-bottom:1%;">
+                    <div class="card-school">
+                        <div class="card-body">
+                            <h4 class="card-title">Extracurricular #1</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-ec-1" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-ec1"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-ec-1').addEventListener('input', getValueEc1);
+                            </script>
+                    </div>
+
+                    <div class="card-school">
+                        <div class="card-body">
+                            <h4 class="card-title">Extracurricular #2</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-ec-2" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-ec2"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-ec-2').addEventListener('input', getValueEc2);
+                            </script>
+                    </div>
+
+                    <div class="card-school">
+                        <div class="card-body">
+                            <h4 class="card-title">Extracurricular #3</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-ec-3" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-ec3"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-ec-3').addEventListener('input', getValueEc3);
+                            </script>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <h3>DAILY LIVING ACTIVITIES</h3>
+            <div class="form-check">
+                <div class="card-deck" style="padding-top:1%;padding-bottom:1%;">
+                    <div class="card-school" id= "card-school-living">
+                        <div class="card-body">
+                            <h4 class="card-title">Necessities (eat, shower, chores, etc)</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-living-1" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-dl1"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-living-1').addEventListener('input', getValueDl1);
+                            </script>
+                    </div>
+
+                    <div class="card-school" id= "card-school-living">
+                        <div class="card-body">
+                            <h4 class="card-title">Family time</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-living-2" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-dl2"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-living-2').addEventListener('input', getValueDl2);
+                            </script>
+                    </div>
+
+                    <div class="card-school" id= "card-school-living">
+                        <div class="card-body">
+                            <h4 class="card-title">Downtime / playtime (friends, TV, social media, Internet, etc)</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-living-3" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-dl3"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-living-3').addEventListener('input', getValueDl3);
+                            </script>
+                    </div>
+
+                    <div class="card-school" id= "card-school-living">
+                        <div class="card-body">
+                            <h4 class="card-title">Work</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-living-4" value="0" min="0" max="300" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-dl4"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-living-4').addEventListener('input', getValueDl4);
+                            </script>
+                    </div>
+
+                    <div class="card-school" id= "card-school-living">
+                        <div class="card-body">
+                            <h4 class="card-title">Other (if appropriate)</h4>
+                        </div>
+                            <span class="range-slider__wrap">
+                                <input type="range" class="range-slider range-slider--primary"
+                                    id="range-slider-living-5" value="0" min="0" max="120" step="5">
+                                <div class="range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom range-slider__tooltip"
+                                    style="left:calc(0% + 10px)">
+                                    <div class="range-slider__tooltip__label" id="label-dl5"></div>
+                                    <div class="range-slider__tooltip__arrow"></div>
+                                </div>
+                            </span>
+                            <script>
+                                document.getElementById('range-slider-living-5').addEventListener('input', getValueDl5);
+                            </script>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container-chart">
+            
+            <div id = "alertOvertime" class="alert alert-danger alert-dismissible fade show">
+                <strong>Warning!</strong> You are over the 24 hour limit!
+            </div>
+           
+            <div class="card-deck" style="padding-top:1%;padding-bottom:1%;">
+                <div class="card-stats">
+                    <div id="chart_wrap">
+                        <div class="chart" id="piechart"></div>
+                    </div>
+                    <card class="stats" id = "extrastats"> </card>
+                    <card class="stats" id = "schoolstats"> </card>
+                    <card class="stats" id = "sleepstats"> </card>
+                    <card class="stats" id = "hwstats"> </card>
+                    <card class="stats" id = "ecstats"> </card>
+                    <card class="stats" id = "dlstats"> </card>
+                    
+                </div>
+            </div>
+        </div>
+    <div class="container-1">
+        <button type="button" id = "printButton" onclick = "window.print();">Print</button>
+    </div>
+            
+    <div class="container-2" id="signatures">
+        <h2>Parent Signature ______________________</h2>
+        <h2 id="student">Student Signature ______________________</h2>
+
+    </div>
+
+    </main>
+  
+</body>
+
+</html>
