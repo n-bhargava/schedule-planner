@@ -110,7 +110,7 @@ function getValueSleep(){
 function getDropdownValueHomework1() {
     let hw1 = this.value;
     hwStored1 = hw1;
-    if (hw1 == "Animation" || hw1 == "Intro to Engineering" || hw1 == "Drawing and Painting 2"){
+    if (hw1 == "Advanced Medical Biotechnology" || hw1 == "Advanced Graphic Communications" || hw1 == "Develop Psychology of Children" || hw1 == "Intro to Kinesiology" || hw1 == "Advanced Guitar" || hw1 == "Concert Choir" || hw1 == "Orchestra"){
         hwValue1 = 5;
         hwDefault1 = 5;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -118,7 +118,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "Personal Business Finance" || hw1 == "AP Comp Sci Principles" || hw1 == "Careers with Children" || hw1 == "Child Development" || hw1 == "CME" || hw1 == "SAT Prep" || hw1 == "Forensics" || hw1 == "Health"){
+    } else if (hw1 == "Personal Business Finance" || hw1 == "Animation 1" || hw1 == "Child Development" || hw1 == "Multimedia Production" || hw1 == "Video Production 1-2" || hw1 == "Concert Band" || hw1 == "Drama" || hw1 == "Drawing and Painting 1"|| hw1 == "Guitar" || hw1 == "CME" || hw1 == "Fine Art Photo" || hw1 == "Community Service and Leadership" || hw1 == "Critical Approaches to Cinema" || hw1 == "Personal Startegic Planning" || hw1 == "Driver’s Ed" || hw1 == "Health" || hw1 == "Science Fiction as Literature"){
         hwValue1 = 10;
         hwDefault1 = 10;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -126,7 +126,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "Integrated Math 1" || hw1 == "Advanced Algebra" || hw1 == "Spanish 2" || hw1 == "Physics" || hw1 == "Develop Psychology of Children" || hw1 == "Principles of Engineering" || hw1 == "Multimedia Production"){
+    } else if (hw1 == "AP Physics 1" || hw1 == "AP Comp Sci Principles" || hw1 == "Careers with Children" || hw1 == "Planning Algorithms Using Python" || hw1 == "Drawing and Painting 2" || hw1 == "Drawing and Painting 3" || hw1 == "Speech and Debate 1" || hw1 == "Forensics" || hw1 == "Yearbook"){
         hwValue1 = 15;
         hwDefault1 = 15;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -134,7 +134,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
     
-    } else if (hw1 == "US History" || hw1 == "Gov/Econ" || hw1 == "French 1" || hw1 == "Spanish 1" || hw1 == "AP Studio Art" || hw1 == "Speech and Debate 1"){
+    } else if (hw1 == "Biology" || hw1 == "Medical Biotechnology" || hw1 == "Physics" || hw1 == "World Cultures" || hw1 == "US History" || hw1 == "Pre-Calculus" || hw1 == "English 3 (11th grade)" || hw1 == "CSU ERWC (12th)" || hw1 == "AP Comp Sci A" || hw1 == "AP Studio Art" || hw1 == "Humanities (AcaDeca)" || hw1 == "Sociology"){
         hwValue1 = 20;
         hwDefault1 = 20;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -142,7 +142,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
         
-    } else if (hw1 == "Integrated Math 2" || hw1 == "Integrated Math 3" || hw1 == "Pre-Calculus" || hw1 == "AP Statistics" || hw1 == "French 3" || hw1 == "Spanish 3" || hw1 == "Biology" || hw1 == "Honors Biology" || hw1 == "Chemistry" || hw1 == "English 1 (9th grade)" || hw1 == "English 2 (10th grade)" || hw1 == "English 3 (11th grade)" || hw1 == "CSU ERWC (12th)" || hw1 == "Principles of Biomed"){
+    } else if (hw1 == "Chemistry" || hw1 == "Government/Economics" || hw1 == "AP Government" || hw1 == "Integrated Math 3" || hw1 == "Advanced Algebra" || hw1 == "French 1" || hw1 == "French 2" || hw1 == "Spanish 1" || hw1 == "Spanish 2" || hw1 == "Spanish 3" || hw1 == "3D Design 1" || hw1 == "Intro to Engineering" || hw1 == "AP Drawing"){
         hwValue1 = 25;
         hwDefault1 = 25;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -150,7 +150,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
         
-    } else if (hw1 == "World Cultures" || hw1 == "French 4" || hw1 == "Spanish 4" || hw1 == "Honors English 1" || hw1 == "Human Body Systems"){
+    } else if (hw1 == "Honors Chemistry" || hw1 == "Human Anatomy and Physiology" || hw1 == "Spanish 4" || hw1 == "AP Environmental Science" || hw1 == "Integrated Math 1" || hw1 == "Integrated Math 2" || hw1 == "French 3" || hw1 == "French 4" || hw1 == "Spanish 4" || hw1 == "Honors English 1" || hw1 == "Honors English 2" || hw1 == "English 2 (10th grade)" || hw1 == "AP Language" || hw1 == "Principles of Engineering" || hw1 == "Student Government"){
         hwValue1 = 30;
         hwDefault1 = 30;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -158,7 +158,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "AP French"){
+    } else if (hw1 == "AP Statistics" || hw1 == "AP Literature" || hw1 == "Animation 2"){
         hwValue1 = 35;
         hwDefault1 = 35;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -166,7 +166,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "World Geography" || hw1 == "AP Government" || hw1 == "French 2" || hw1 == "AP Environmental Science" || hw1 == "Honors English 2"){
+    } else if (hw1 == "AP Human Geography" || hw1 == "AP World History" || hw1 == "Advanced Production Management"){
         hwValue1 = 40;
         hwDefault1 = 40;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -175,7 +175,7 @@ function getDropdownValueHomework1() {
         drawChart();
 
     
-    } else if (hw1 == "AP Chemistry" || hw1 == "AP Language"){
+    } else if (hw1 == "AP Chemistry" || hw1 == "Creative Writing"){
         hwValue1 = 45;
         hwDefault1 = 45;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -183,7 +183,7 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "AP Spanish"){
+    } else if (hw1 == "AP Psychology" || hw1 == "AP Calculus"){
         hwValue1 = 50;
         hwDefault1 = 50;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -191,7 +191,15 @@ function getDropdownValueHomework1() {
         document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
         drawChart();
 
-    } else if (hw1 == "AP Calculus" || hw1 == "AP Human Geo" || hw1 == "AP World History" || hw1 == "AP US History" || hw1 == "AP Psychology" || hw1 == "Honors Chemistry" || hw1 == "AP Biology" || hw1 == "AP Physics" || hw1 == "AP Literature"){
+    } else if (hw1 == "AP US History"){
+        hwValue1 = 55;
+        hwDefault1 = 55;
+        document.getElementById('range-slider-homework-1').disabled = false;
+        document.getElementById('range-slider-homework-1').value = hwValue1;
+        document.getElementById('label-hw1').textContent = "MHT: " + hwValue1 + " mins";
+        drawChart();
+
+    } else if (hw1 == "AP Biology"){
         hwValue1 = 60;
         hwDefault1 = 60;
         document.getElementById('range-slider-homework-1').disabled = false;
@@ -243,7 +251,7 @@ function getValueHomework1(){
 function getDropdownValueHomework2() {
     let hw2 = this.value;
     hwStored2 = hw2;
-    if (hw2 == "Animation" || hw2 == "Intro to Engineering" || hw2 == "Drawing and Painting 2"){
+    if (hw2 == "Advanced Medical Biotechnology" || hw2 == "Advanced Graphic Communications" || hw2 == "Develop Psychology of Children" || hw2 == "Intro to Kinesiology" || hw2 == "Advanced Guitar" || hw2 == "Concert Choir" || hw2 == "Orchestra"){
         hwValue2 = 5;
         hwDefault2 = 5;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -251,7 +259,7 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "Personal Business Finance" || hw2 == "AP Comp Sci Principles" || hw2 == "Careers with Children" || hw2 == "Child Development" || hw2 == "CME" || hw2 == "SAT Prep" || hw2 == "Forensics" || hw2 == "Health"){
+    } else if (hw2 == "Personal Business Finance" || hw2 == "Animation 1" || hw2 == "Child Development" || hw2 == "Multimedia Production" || hw2 == "Video Production 1-2" || hw2 == "Concert Band" || hw2 == "Drama" || hw2 == "Drawing and Painting 1"|| hw2 == "Guitar" || hw2 == "CME" || hw2 == "Fine Art Photo" || hw2 == "Community Service and Leadership" || hw2 == "Critical Approaches to Cinema" || hw2 == "Personal Startegic Planning" || hw2 == "Driver’s Ed" || hw2 == "Health" || hw2 == "Science Fiction as Literature"){
         hwValue2 = 10;
         hwDefault2 = 10;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -259,23 +267,23 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "Integrated Math 1" || hw2 == "Advanced Algebra" || hw2 == "Spanish 2" || hw2 == "Physics" || hw2 == "Develop Psychology of Children" || hw2 == "Principles of Engineering" || hw2 == "Multimedia Production"){
+    } else if (hw2 == "AP Physics 1" || hw2 == "AP Comp Sci Principles" || hw2 == "Careers with Children" || hw2 == "Planning Algorithms Using Python" || hw2 == "Drawing and Painting 2" || hw2 == "Drawing and Painting 3" || hw2 == "Speech and Debate 1" || hw2 == "Forensics" || hw2 == "Yearbook"){
         hwValue2 = 15;
         hwDefault2 = 15;
         document.getElementById('range-slider-homework-2').disabled = false;
         document.getElementById('range-slider-homework-2').value = hwValue2;
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
-        
-    } else if (hw2 == "US History" || hw2 == "Gov/Econ" || hw2 == "French 1" || hw2 == "Spanish 1" || hw2 == "AP Studio Art" || hw2 == "Speech and Debate 1"){
+    
+    } else if (hw2 == "Biology" || hw2 == "Medical Biotechnology" || hw2 == "Physics" || hw2 == "World Cultures" || hw2 == "US History" || hw2 == "Pre-Calculus" || hw2 == "English 3 (11th grade)" || hw2 == "CSU ERWC (12th)" || hw2 == "AP Comp Sci A" || hw2 == "AP Studio Art" || hw2 == "Humanities (AcaDeca)" || hw2 == "Sociology"){
         hwValue2 = 20;
         hwDefault2 = 20;
         document.getElementById('range-slider-homework-2').disabled = false;
         document.getElementById('range-slider-homework-2').value = hwValue2;
-        document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";;
+        document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
         
-    } else if (hw2 == "Integrated Math 2" || hw2 == "Integrated Math 3" || hw2 == "Pre-Calculus" || hw2 == "AP Statistics" || hw2 == "French 3" || hw2 == "Spanish 3" || hw2 == "Biology" || hw2 == "Honors Biology" || hw2 == "Chemistry" || hw2 == "English 1 (9th grade)" || hw2 == "English 2 (10th grade)" || hw2 == "English 3 (11th grade)" || hw2 == "CSU ERWC (12th)" || hw2 == "Principles of Biomed"){
+    } else if (hw2 == "Chemistry" || hw2 == "Government/Economics" || hw2 == "AP Government" || hw2 == "Integrated Math 3" || hw2 == "Advanced Algebra" || hw2 == "French 1" || hw2 == "French 2" || hw2 == "Spanish 1" || hw2 == "Spanish 2" || hw2 == "Spanish 3" || hw2 == "3D Design 1" || hw2 == "Intro to Engineering" || hw2 == "AP Drawing"){
         hwValue2 = 25;
         hwDefault2 = 25;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -283,7 +291,7 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
         
-    } else if (hw2 == "World Cultures" || hw2 == "French 4" || hw2 == "Spanish 4" || hw2 == "Honors English 1" || hw2 == "Human Body Systems"){
+    } else if (hw2 == "Honors Chemistry" || hw2 == "Human Anatomy and Physiology" || hw2 == "Spanish 4" || hw2 == "AP Environmental Science" || hw2 == "Integrated Math 1" || hw2 == "Integrated Math 2" || hw2 == "French 3" || hw2 == "French 4" || hw2 == "Spanish 4" || hw2 == "Honors English 1" || hw2 == "Honors English 2" || hw2 == "English 2 (10th grade)" || hw2 == "AP Language" || hw2 == "Principles of Engineering" || hw2 == "Student Government"){
         hwValue2 = 30;
         hwDefault2 = 30;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -291,7 +299,7 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "AP French"){
+    } else if (hw2 == "AP Statistics" || hw2 == "AP Literature" || hw2 == "Animation 2"){
         hwValue2 = 35;
         hwDefault2 = 35;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -299,7 +307,7 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "World Geography" || hw2 == "AP Government" || hw2 == "French 2" || hw2 == "AP Environmental Science" || hw2 == "Honors English 2"){
+    } else if (hw2 == "AP Human Geography" || hw2 == "AP World History" || hw2 == "Advanced Production Management"){
         hwValue2 = 40;
         hwDefault2 = 40;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -308,7 +316,7 @@ function getDropdownValueHomework2() {
         drawChart();
 
     
-    } else if (hw2 == "AP Chemistry" || hw2 == "AP Language"){
+    } else if (hw2 == "AP Chemistry" || hw2 == "Creative Writing"){
         hwValue2 = 45;
         hwDefault2 = 45;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -316,7 +324,7 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "AP Spanish"){
+    } else if (hw2 == "AP Psychology" || hw2 == "AP Calculus"){
         hwValue2 = 50;
         hwDefault2 = 50;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -324,7 +332,15 @@ function getDropdownValueHomework2() {
         document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
         drawChart();
 
-    } else if (hw2 == "AP Calculus" || hw2 == "AP Human Geo" || hw2 == "AP World History" || hw2 == "AP US History" || hw2 == "AP Psychology" || hw2 == "Honors Chemistry" || hw2 == "AP Biology" || hw2 == "AP Physics" || hw2 == "AP Literature"){
+    } else if (hw2 == "AP US History"){
+        hwValue2 = 55;
+        hwDefault2 = 55;
+        document.getElementById('range-slider-homework-2').disabled = false;
+        document.getElementById('range-slider-homework-2').value = hwValue2;
+        document.getElementById('label-hw2').textContent = "MHT: " + hwValue2 + " mins";
+        drawChart();
+
+    } else if (hw2 == "AP Biology"){
         hwValue2 = 60;
         hwDefault2 = 60;
         document.getElementById('range-slider-homework-2').disabled = false;
@@ -351,7 +367,6 @@ function getDropdownValueHomework2() {
     }
 
 
-
 }
 
 function getValueHomework2(){
@@ -375,7 +390,7 @@ function getValueHomework2(){
 function getDropdownValueHomework3() {
     let hw3 = this.value;
     hwStored3 = hw3;
-    if (hw3 == "Animation" || hw3 == "Intro to Engineering" || hw3 == "Drawing and Painting 2"){
+    if (hw3 == "Advanced Medical Biotechnology" || hw3 == "Advanced Graphic Communications" || hw3 == "Develop Psychology of Children" || hw3 == "Intro to Kinesiology" || hw3 == "Advanced Guitar" || hw3 == "Concert Choir" || hw3 == "Orchestra"){
         hwValue3 = 5;
         hwDefault3 = 5;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -383,7 +398,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "Personal Business Finance" || hw3 == "AP Comp Sci Principles" || hw3 == "Careers with Children" || hw3 == "Child Development" || hw3 == "CME" || hw3 == "SAT Prep" || hw3 == "Forensics" || hw3 == "Health"){
+    } else if (hw3 == "Personal Business Finance" || hw3 == "Animation 1" || hw3 == "Child Development" || hw3 == "Multimedia Production" || hw3 == "Video Production 1-2" || hw3 == "Concert Band" || hw3 == "Drama" || hw3 == "Drawing and Painting 1"|| hw3 == "Guitar" || hw3 == "CME" || hw3 == "Fine Art Photo" || hw3 == "Community Service and Leadership" || hw3 == "Critical Approaches to Cinema" || hw3 == "Personal Startegic Planning" || hw3 == "Driver’s Ed" || hw3 == "Health" || hw3 == "Science Fiction as Literature"){
         hwValue3 = 10;
         hwDefault3 = 10;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -391,15 +406,15 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "Integrated Math 1" || hw3 == "Advanced Algebra" || hw3 == "Spanish 2" || hw3 == "Physics" || hw3 == "Develop Psychology of Children" || hw3 == "Principles of Engineering" || hw3 == "Multimedia Production"){
+    } else if (hw3 == "AP Physics 1" || hw3 == "AP Comp Sci Principles" || hw3 == "Careers with Children" || hw3 == "Planning Algorithms Using Python" || hw3 == "Drawing and Painting 2" || hw3 == "Drawing and Painting 3" || hw3 == "Speech and Debate 1" || hw3 == "Forensics" || hw3 == "Yearbook"){
         hwValue3 = 15;
         hwDefault3 = 15;
         document.getElementById('range-slider-homework-3').disabled = false;
         document.getElementById('range-slider-homework-3').value = hwValue3;
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
-        
-    } else if (hw3 == "US History" || hw3 == "Gov/Econ" || hw3 == "French 1" || hw3 == "Spanish 1" || hw3 == "AP Studio Art" || hw3 == "Speech and Debate 1"){
+    
+    } else if (hw3 == "Biology" || hw3 == "Medical Biotechnology" || hw3 == "Physics" || hw3 == "World Cultures" || hw3 == "US History" || hw3 == "Pre-Calculus" || hw3 == "English 3 (11th grade)" || hw3 == "CSU ERWC (12th)" || hw3 == "AP Comp Sci A" || hw3 == "AP Studio Art" || hw3 == "Humanities (AcaDeca)" || hw3 == "Sociology"){
         hwValue3 = 20;
         hwDefault3 = 20;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -407,7 +422,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
         
-    } else if (hw3 == "Integrated Math 2" || hw3 == "Integrated Math 3" || hw3 == "Pre-Calculus" || hw3 == "AP Statistics" || hw3 == "French 3" || hw3 == "Spanish 3" || hw3 == "Biology" || hw3 == "Honors Biology" || hw3 == "Chemistry" || hw3 == "English 1 (9th grade)" || hw3 == "English 2 (10th grade)" || hw3 == "English 3 (11th grade)" || hw3 == "CSU ERWC (12th)" || hw3 == "Principles of Biomed"){
+    } else if (hw3 == "Chemistry" || hw3 == "Government/Economics" || hw3 == "AP Government" || hw3 == "Integrated Math 3" || hw3 == "Advanced Algebra" || hw3 == "French 1" || hw3 == "French 2" || hw3 == "Spanish 1" || hw3 == "Spanish 2" || hw3 == "Spanish 3" || hw3 == "3D Design 1" || hw3 == "Intro to Engineering" || hw3 == "AP Drawing"){
         hwValue3 = 25;
         hwDefault3 = 25;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -415,7 +430,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
         
-    } else if (hw3 == "World Cultures" || hw3 == "French 4" || hw3 == "Spanish 4" || hw3 == "Honors English 1" || hw3 == "Human Body Systems"){
+    } else if (hw3 == "Honors Chemistry" || hw3 == "Human Anatomy and Physiology" || hw3 == "Spanish 4" || hw3 == "AP Environmental Science" || hw3 == "Integrated Math 1" || hw3 == "Integrated Math 2" || hw3 == "French 3" || hw3 == "French 4" || hw3 == "Spanish 4" || hw3 == "Honors English 1" || hw3 == "Honors English 2" || hw3 == "English 2 (10th grade)" || hw3 == "AP Language" || hw3 == "Principles of Engineering" || hw3 == "Student Government"){
         hwValue3 = 30;
         hwDefault3 = 30;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -423,7 +438,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "AP French"){
+    } else if (hw3 == "AP Statistics" || hw3 == "AP Literature" || hw3 == "Animation 2"){
         hwValue3 = 35;
         hwDefault3 = 35;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -431,7 +446,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "World Geography" || hw3 == "AP Government" || hw3 == "French 2" || hw3 == "AP Environmental Science" || hw3 == "Honors English 2"){
+    } else if (hw3 == "AP Human Geography" || hw3 == "AP World History" || hw3 == "Advanced Production Management"){
         hwValue3 = 40;
         hwDefault3 = 40;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -440,7 +455,7 @@ function getDropdownValueHomework3() {
         drawChart();
 
     
-    } else if (hw3 == "AP Chemistry" || hw3 == "AP Language"){
+    } else if (hw3 == "AP Chemistry" || hw3 == "Creative Writing"){
         hwValue3 = 45;
         hwDefault3 = 45;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -448,7 +463,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "AP Spanish"){
+    } else if (hw3 == "AP Psychology" || hw3 == "AP Calculus"){
         hwValue3 = 50;
         hwDefault3 = 50;
         document.getElementById('range-slider-homework-3').disabled = false;
@@ -456,12 +471,20 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
-    } else if (hw3 == "AP Calculus" || hw3 == "AP Human Geo" || hw3 == "AP World History" || hw3 == "AP US History" || hw3 == "AP Psychology" || hw3 == "Honors Chemistry" || hw3 == "AP Biology" || hw3 == "AP Physics" || hw3 == "AP Literature"){
+    } else if (hw3 == "AP US History"){
+        hwValue3 = 55;
+        hwDefault3 = 55;
+        document.getElementById('range-slider-homework-3').disabled = false;
+        document.getElementById('range-slider-homework-3').value = hwValue3;
+        document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
+        drawChart();
+
+    } else if (hw3 == "AP Biology"){
         hwValue3 = 60;
         hwDefault3 = 60;
         document.getElementById('range-slider-homework-3').disabled = false;
         document.getElementById('range-slider-homework-3').value = hwValue3;
-        document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";;
+        document.getElementById('label-hw3').textContent = "MHT: " + hwValue3 + " mins";
         drawChart();
 
     } else if (hw3 == " "){
@@ -472,6 +495,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = hwValue3 + " mins";
         document.getElementById('range-slider-homework-3').disabled = true;
         drawChart();
+    
     } else {
         hwValue3 = 0;
         hwDefault3 = 0;
@@ -480,6 +504,7 @@ function getDropdownValueHomework3() {
         document.getElementById('label-hw3').textContent = hwValue3 + " mins";
         drawChart();
     }
+
 
 
 }
@@ -506,7 +531,7 @@ function getValueHomework3(){
 function getDropdownValueHomework4() {
     let hw4 = this.value;
     hwStored4 = hw4;
-    if (hw4 == "Animation" || hw4 == "Intro to Engineering" || hw4 == "Drawing and Painting 2"){
+    if (hw4 == "Advanced Medical Biotechnology" || hw4 == "Advanced Graphic Communications" || hw4 == "Develop Psychology of Children" || hw4 == "Intro to Kinesiology" || hw4 == "Advanced Guitar" || hw4 == "Concert Choir" || hw4 == "Orchestra"){
         hwValue4 = 5;
         hwDefault4 = 5;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -514,7 +539,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "Personal Business Finance" || hw4 == "AP Comp Sci Principles" || hw4 == "Careers with Children" || hw4 == "Child Development" || hw4 == "CME" || hw4 == "SAT Prep" || hw4 == "Forensics" || hw4 == "Health"){
+    } else if (hw4 == "Personal Business Finance" || hw4 == "Animation 1" || hw4 == "Child Development" || hw4 == "Multimedia Production" || hw4 == "Video Production 1-2" || hw4 == "Concert Band" || hw4 == "Drama" || hw4 == "Drawing and Painting 1"|| hw4 == "Guitar" || hw4 == "CME" || hw4 == "Fine Art Photo" || hw4 == "Community Service and Leadership" || hw4 == "Critical Approaches to Cinema" || hw4 == "Personal Startegic Planning" || hw4 == "Driver’s Ed" || hw4 == "Health" || hw4 == "Science Fiction as Literature"){
         hwValue4 = 10;
         hwDefault4 = 10;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -522,15 +547,15 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "Integrated Math 1" || hw4 == "Advanced Algebra" || hw4 == "Spanish 2" || hw4 == "Physics" || hw4 == "Develop Psychology of Children" || hw4 == "Principles of Engineering" || hw4 == "Multimedia Production"){
+    } else if (hw4 == "AP Physics 1" || hw4 == "AP Comp Sci Principles" || hw4 == "Careers with Children" || hw4 == "Planning Algorithms Using Python" || hw4 == "Drawing and Painting 2" || hw4 == "Drawing and Painting 3" || hw4 == "Speech and Debate 1" || hw4 == "Forensics" || hw4 == "Yearbook"){
         hwValue4 = 15;
         hwDefault4 = 15;
         document.getElementById('range-slider-homework-4').disabled = false;
         document.getElementById('range-slider-homework-4').value = hwValue4;
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
-        
-    } else if (hw4 == "US History" || hw4 == "Gov/Econ" || hw4 == "French 1" || hw4 == "Spanish 1" || hw4 == "AP Studio Art" || hw4 == "Speech and Debate 1"){
+    
+    } else if (hw4 == "Biology" || hw4 == "Medical Biotechnology" || hw4 == "Physics" || hw4 == "World Cultures" || hw4 == "US History" || hw4 == "Pre-Calculus" || hw4 == "English 3 (11th grade)" || hw4 == "CSU ERWC (12th)" || hw4 == "AP Comp Sci A" || hw4 == "AP Studio Art" || hw4 == "Humanities (AcaDeca)" || hw4 == "Sociology"){
         hwValue4 = 20;
         hwDefault4 = 20;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -538,7 +563,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
         
-    } else if (hw4 == "Integrated Math 2" || hw4 == "Integrated Math 3" || hw4 == "Pre-Calculus" || hw4 == "AP Statistics" || hw4 == "French 3" || hw4 == "Spanish 3" || hw4 == "Biology" || hw4 == "Honors Biology" || hw4 == "Chemistry" || hw4 == "English 1 (9th grade)" || hw4 == "English 2 (10th grade)" || hw4 == "English 3 (11th grade)" || hw4 == "CSU ERWC (12th)" || hw4 == "Principles of Biomed"){
+    } else if (hw4 == "Chemistry" || hw4 == "Government/Economics" || hw4 == "AP Government" || hw4 == "Integrated Math 3" || hw4 == "Advanced Algebra" || hw4 == "French 1" || hw4 == "French 2" || hw4 == "Spanish 1" || hw4 == "Spanish 2" || hw4 == "Spanish 3" || hw4 == "3D Design 1" || hw4 == "Intro to Engineering" || hw4 == "AP Drawing"){
         hwValue4 = 25;
         hwDefault4 = 25;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -546,7 +571,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
         
-    } else if (hw4 == "World Cultures" || hw4 == "French 4" || hw4 == "Spanish 4" || hw4 == "Honors English 1" || hw4 == "Human Body Systems"){
+    } else if (hw4 == "Honors Chemistry" || hw4 == "Human Anatomy and Physiology" || hw4 == "Spanish 4" || hw4 == "AP Environmental Science" || hw4 == "Integrated Math 1" || hw4 == "Integrated Math 2" || hw4 == "French 3" || hw4 == "French 4" || hw4 == "Spanish 4" || hw4 == "Honors English 1" || hw4 == "Honors English 2" || hw4 == "English 2 (10th grade)" || hw4 == "AP Language" || hw4 == "Principles of Engineering" || hw4 == "Student Government"){
         hwValue4 = 30;
         hwDefault4 = 30;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -554,7 +579,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "AP French"){
+    } else if (hw4 == "AP Statistics" || hw4 == "AP Literature" || hw4 == "Animation 2"){
         hwValue4 = 35;
         hwDefault4 = 35;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -562,7 +587,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "World Geography" || hw4 == "AP Government" || hw4 == "French 2" || hw4 == "AP Environmental Science" || hw4 == "Honors English 2"){
+    } else if (hw4 == "AP Human Geography" || hw4 == "AP World History" || hw4 == "Advanced Production Management"){
         hwValue4 = 40;
         hwDefault4 = 40;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -571,7 +596,7 @@ function getDropdownValueHomework4() {
         drawChart();
 
     
-    } else if (hw4 == "AP Chemistry" || hw4 == "AP Language"){
+    } else if (hw4 == "AP Chemistry" || hw4 == "Creative Writing"){
         hwValue4 = 45;
         hwDefault4 = 45;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -579,7 +604,7 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "AP Spanish"){
+    } else if (hw4 == "AP Psychology" || hw4 == "AP Calculus"){
         hwValue4 = 50;
         hwDefault4 = 50;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -587,7 +612,15 @@ function getDropdownValueHomework4() {
         document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
         drawChart();
 
-    } else if (hw4 == "AP Calculus" || hw4 == "AP Human Geo" || hw4 == "AP World History" || hw4 == "AP US History" || hw4 == "AP Psychology" || hw4 == "Honors Chemistry" || hw4 == "AP Biology" || hw4 == "AP Physics" || hw4 == "AP Literature"){
+    } else if (hw4 == "AP US History"){
+        hwValue4 = 55;
+        hwDefault4 = 55;
+        document.getElementById('range-slider-homework-4').disabled = false;
+        document.getElementById('range-slider-homework-4').value = hwValue4;
+        document.getElementById('label-hw4').textContent = "MHT: " + hwValue4 + " mins";
+        drawChart();
+
+    } else if (hw4 == "AP Biology"){
         hwValue4 = 60;
         hwDefault4 = 60;
         document.getElementById('range-slider-homework-4').disabled = false;
@@ -599,7 +632,7 @@ function getDropdownValueHomework4() {
         hwValue4 = 0;
         hwDefault4 = 0;
         document.getElementById('range-slider-homework-4').disabled = false;
-        document.getElementById('range-slider-homework-4').value = hwValue4;
+        document.getElementById('range-slider-homework-4').value = hwValue3;
         document.getElementById('label-hw4').textContent = hwValue4 + " mins";
         document.getElementById('range-slider-homework-4').disabled = true;
         drawChart();
@@ -1001,7 +1034,7 @@ function drawChart() {
         fontName: 'amiri',
         fontSize: 12.5,
         is3D: true,
-        slices: {0: {color: '#e3e4e6'}, 1:{color: '#4EC7FF'}, 2:{color: '#00A7FA'}, 3: {color: '#0098E4'}, 4:{color: '#008ACE'}, 5:{color: '#006A9F'}, 6:{color:'#005F8F'}, 7: {color:'#EB3269'}, 8:{color: '#FF2E8C'}, 9:{color: '#FF509F'},  10:{color: '#FF6AD5'}, 11:{color: '#C774E8'}, 12:{color: '#AD8CFF'}, 13:{color: '#8795E8'}, 14:{color: '#94D0FF'}},
+        slices: {0: {color: '#e3e4e6'}, 1:{color: '#4EC7FF'}, 2:{color: '#00A7FA'}, 3: {color: '#0098E4'}, 4:{color: '#008ACE'}, 5:{color: '#006A9F'}, 6:{color:'#005F8F'}, 7: {color:'#EB3269'}, 8:{color: '#FF2E8C'}, 9:{color: '#FF509F'},  10:{color: '#FF6AD5'}, 11:{color: '#C774E8'}, 12:{color: '#AD8CFF'}, 13:{color: '#8795E8'}, 14:{color: '#89DAFF'}},
         pieSliceText: 'label',
         chartArea: {left:0,top:10, right:0, bottom:10, width:"100%"}
         };
