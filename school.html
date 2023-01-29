@@ -47,7 +47,7 @@
         <h1 id=welcome>BALANCE MY SCHEDULE</h1>
         <h2 id="welcome">Welcome to Vista Del Lago's Schedule Planner!</h2>
         <p id="instruction">This is in relation to one day. Please fill out all the fields!</p>
-        <p id="instruction">You can not pick any homework amount lower than the average minutes reported.</p>
+        <p id="instruction">You can not pick any homework amount lower than the reported average minutes per night. <br> Hover over a class to view its rigor level (on a scale of 1-4, where 4 is the highest level of rigor)</p>
 
 
         <div class="container">
@@ -129,114 +129,120 @@
                                 <select name="homeworkHours" id="homeworkHours1">
                                     <option value=" "> </option>
                                     <optgroup label="------ Mathematics ------">
-                                        <option value="Advanced Algebra">Advanced Algebra</option>
-                                        <option value="AP Calculus">AP Calculus</option>
-                                        <option value="AP Statistics">AP Statistics*</option>
-                                        <option value="Integrated Math 1">Integrated Math 1</option>
-                                        <option value="Integrated Math 2">Integrated Math 2</option>
-                                        <option value="Integrated Math 3">Integrated Math 3</option>
-                                        <option value="Personal Business Finance">Personal Business Finance</option>
-                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="Advanced Algebra" title="Rigor: 2.5">Advanced Algebra</option>
+                                        <option value="AP Calculus" title="Rigor: 4">AP Calculus</option>
+                                        <option value="AP Statistics" title="Rigor: 3">AP Statistics*</option>
+                                        <option value="Integrated Math 1" title="Rigor: 2.5">Integrated Math 1</option>
+                                        <option value="Integrated Math 2" title="Rigor: 3">Integrated Math 2</option>
+                                        <option value="Integrated Math 3" title="Rigor: 2.5">Integrated Math 3</option>
+                                        <option value="Personal Business Finance" title="Rigor: 1.5">Personal Business Finance</option>
+                                        <option value="Pre-Calculus" title="Rigor: 2.5">Pre-Calculus</option>
                                         <option value="other math">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Science -------">
-                                        <option value="AP Biology">AP Biology*</option>
-                                        <option value="AP Chemistry">AP Chemistry</option>
-                                        <option value="AP Environmental Science">AP Environmental Science*</option>
-                                        <option value="AP Physics">AP Physics*</option>
-                                        <option value="Biology">Biology</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Honors Biology">Honors Biology</option>
-                                        <option value="Honors Chemistry">Honors Chemistry</option>
-                                        <option value="Physics">Physics</option>
+                                        <option value="Advanced Medical Biotechnology" title="Rigor: 2">Advanced Medical Biotechnology</option>
+                                        <option value="AP Biology" title="Rigor: 4">AP Biology*</option>
+                                        <option value="AP Chemistry" title="Rigor: 3.5">AP Chemistry</option>
+                                        <option value="AP Environmental Science" title="Rigor: 3">AP Environmental Science*</option>
+                                        <option value="AP Physics 1" title="Rigor: 3">AP Physics 1*</option>
+                                        <option value="Biology" title="Rigor: 2.5">Biology</option>
+                                        <option value="Chemistry" title="Rigor: 3">Chemistry</option>
+                                        <option value="Honors Chemistry" title="Rigor: 3">Honors Chemistry</option>
+                                        <option value="Human Anatomy and Physiology" title="Rigor: 3.5">Human Anatomy and Physiology</option>
+                                        <option value="Medical Biotechnology" title="Rigor: 2">Medical Biotechnology</option>
+                                        <option value="Physics" title="Rigor: 2.5">Physics</option>
                                         <option value="other science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Social Studies -------">
-                                        <option value="AP Government">AP Government</option>
-                                        <option value="AP Human Geography">AP Human Geography</option>
-                                        <option value="AP Psychology">AP Psychology</option>
-                                        <option value="AP US History">AP US History</option>
-                                        <option value="AP World History">AP World History</option>
-                                        <option value="Government/Economics">Government/Economics</option>
-                                        <option value="US History">US History</option>
-                                        <option value="World Cultures">World Cultures</option>
-                                        <option value="World Geography">World Geography</option>
+                                        <option value="AP Government" title="Rigor: 3">AP Government</option>
+                                        <option value="AP Human Geography" title="Rigor: 3">AP Human Geography</option>
+                                        <option value="AP Psychology" title="Rigor: 3">AP Psychology</option>
+                                        <option value="AP US History" title="Rigor: 3">AP US History*</option>
+                                        <option value="AP World History" title="Rigor: 3">AP World History</option>
+                                        <option value="Government/Economics" title="Rigor: 2.5">Government/Economics</option>
+                                        <option value="US History" title="Rigor: 2">US History</option>
+                                        <option value="World Cultures" title="Rigor: 2.5">World Cultures</option>
                                         <option value="other social science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- English -------">
-                                        <option value="AP Language">AP Language*</option>
-                                        <option value="AP Literature">AP Literature*</option>
-                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
-                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
-                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
-                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
-                                        <option value="Honors English 1">Honors English 1*</option>
-                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="AP Language" title="Rigor: 3">AP Language*</option>
+                                        <option value="AP Literature" title="Rigor: 3.5">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)" title="Rigor: 2.5">CSU ERWC (12th)</option>
+                                        <option value="English 2 (10th grade)" title="Rigor: 2.5">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)" title="Rigor: 2">English 3 (11th grade)</option>
+                                        <option value="Honors English 1" title="Rigor: 3">Honors English 1*</option>
+                                        <option value="Honors English 2" title="Rigor: 3">Honors English 2*</option>
                                         <option value="other english">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- World Languages -------">
-                                        <option value="AP French">AP French*</option>
-                                        <option value="AP Spanish">AP Spanish*</option>
-                                        <option value="French 1">French 1</option>
-                                        <option value="French 2">French 2</option>
-                                        <option value="French 3">French 3</option>
-                                        <option value="French 4">French 4</option>
-                                        <option value="Spanish 1">Spanish 1</option>
-                                        <option value="Spanish 2">Spanish 2</option>
-                                        <option value="Spanish 3">Spanish 3</option>
-                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="French 1" title="Rigor: 2.5">French 1</option>
+                                        <option value="French 2" title="Rigor: 3">French 2</option>
+                                        <option value="French 3" title="Rigor: 3">French 3</option>
+                                        <option value="French 4" title="Rigor: 3">French 4</option>
+                                        <option value="Spanish 1" title="Rigor: 3">Spanish 1</option>
+                                        <option value="Spanish 2" title="Rigor: 3">Spanish 2</option>
+                                        <option value="Spanish 3" title="Rigor: 3">Spanish 3</option>
+                                        <option value="Spanish 4" title="Rigor: 4">Spanish 4</option>
                                         <option value="other language">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- CTE -------">
-                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
-                                        <option value="Animation">Animation</option>
-                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
-                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
-                                        <option value="Careers with Children">Careers with Children</option>
-                                        <option value="Child Development">Child Development</option>
-                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
-                                        <option value="Human Body Systems">Human Body Systems</option>
-                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
-                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
-                                        <option value="Principles of Biomed">Principles of Biomed</option>
-                                        <option value="Principles of Engineering">Principles of Engineering</option>
-                                        <option value="Multimedia Production">Multimedia Production</option>
-                                        <option value="Video Production">Video Production</option>
+                                        <option value="3D Design 1" title="Rigor: 2.5">3D Design 1</option>
+                                        <option value="Advanced Graphic Communications" title="Rigor: 1.5">Advanced Graphic Communications</option>
+                                        <option value="Advanced Production Management" title="Rigor: 2">Advanced Production Management</option>
+                                        <option value="Animation 1" title="Rigor: 2">Animation 1</option>
+                                        <option value="Animation 2" title="Rigor: 2.5">Animation 2</option>
+                                        <option value="AP Comp Sci A" title="Rigor: 2.5">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles" title="Rigor: 2">AP Computer Science Principles</option>
+                                        <option value="Careers with Children" title="Rigor: 1.5">Careers with Children</option>
+                                        <option value="Child Development" title="Rigor: 1.5">Child Development and Guidance</option>
+                                        <option value="Develop Psychology of Children" title="Rigor: 1">Develop Psychology of Children</option>
+                                        <option value="Intro to Engineering" title="Rigor: 2.5">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology" title="Rigor: 1">Intro to Kinesiology</option>
+                                        <option value="Planning Algorithms Using Python" title="Rigor: 2.5">Planning Algorithms Using Python</option>
+                                        <option value="Principles of Engineering" title="Rigor: 3">Principles of Engineering</option>
+                                        <option value="Multimedia Production" title="Rigor: 2">Multimedia Production</option>
+                                        <option value="Video Production 1-2" title="Rigor: 1.5">Video Production 1-2</option>
                                         <option value="other cte">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- VAPA -------">
-                                        <option value="AP Studio Art">AP Studio Art*</option>
-                                        <option value="Art and New Media">Art and New Media</option>
-                                        <option value="Ceramics">Ceramics</option>
-                                        <option value="CME">CME</option>
-                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
-                                        <option value="Drama">Drama</option>
-                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
-                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
-                                        <option value="Fine Art Photo">Fine Art Photo</option>
-                                        <option value="Guitar">Guitar</option>
-                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="Advanced Guitar" title="Rigor: 2">Advanced Guitar</option>
+                                        <option value="AP Drawing" title="Rigor: 2.5">AP Drawing*</option>
+                                        <option value="AP Studio Art" title="Rigor: 2">AP Studio Art*</option>
+                                        <option value="Ceramics" title="Rigor: 1">Ceramics and Sculpture</option>
+                                        <option value="CME" title="Rigor: 1.5">CME</option>
+                                        <option value="Concert Band" title="Rigor: 1.5">Concert Band</option>
+                                        <option value="Concert Choir" title="Rigor: 1">Concert Choir</option>
+                                        <option value="Drama" title="Rigor: 1.5">Drama</option>
+                                        <option value="Drawing and Painting 1" title="Rigor: 2">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2" title="Rigor: 2">Drawing and Painting 2</option>
+                                        <option value="Drawing and Painting 3" title="Rigor: 1.5">Drawing and Painting 3</option>
+                                        <option value="Fine Art Photo" title="Rigor: 1.5">Fine Art Photo</option>
+                                        <option value="Guitar" title="Rigor: 1.5">Guitar (All Levels)</option>
+                                        <option value="Orchestra" title="Rigor: 1">Orchestra</option>   
                                         <option value="other vapa">Other</option>
                                     </optgroup>
                                     
                                     <optgroup label="------- Electives -------">
-                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
-                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
-                                        <option value="Driver’s Ed">Driver’s Ed</option>
-                                        <option value="Forensics">Forensics</option>
-                                        <option value="Health">Health</option>
-                                        <option value="Peer Leadership">Peer Leadership</option>
-                                        <option value="SAT Prep">SAT Prep</option>
-                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
-                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
-                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
-                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="Community Service and Leadership" title="Rigor: 1.5">Community Service and Leadership</option>
+                                        <option value="Creative Writing" title="Rigor: 3">Creative Writing</option>
+                                        <option value="Critical Approaches to Cinema" title="Rigor: 1.5">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed" title="Rigor: 1.5">Driver’s Ed</option>
+                                        <option value="Forensics" title="Rigor: 2">Forensics</option>
+                                        <option value="Health" title="Rigor: 1.5">Health</option>
+                                        <option value="Humanities (AcaDeca)" title="Rigor: 2.5">Humanities (AcaDeca)</option>
+                                        <option value="Personal Startegic Planning" title="Rigor: 1.5">Personal Strategic Planning</option>
+                                        <option value="Science Fiction as Literature" title="Rigor: 1.5">Science Fiction as Literature</option>
+                                        <option value="Sociology" title="Rigor: 1.5">Sociology</option>
+                                        <option value="Speech and Debate 1" title="Rigor: 2">Speech and Debate 1</option>>
+                                        <option value="Student Government" title="Rigor: 2.5">Student Government</option>
+                                        <option value="Teacher Assistant" title="Rigor: 1">Teacher Assistant</option>
+                                        <option value="Yearbook" title="Rigor: 2">Yearbook</option>
                                         <option value="other elective">Other</option>
                                     </optgroup>
                                     
@@ -266,114 +272,120 @@
                             <select name="homeworkHours" id="homeworkHours2">
                                 <option value=" "> </option>
                                     <optgroup label="------ Mathematics ------">
-                                        <option value="Advanced Algebra">Advanced Algebra</option>
-                                        <option value="AP Calculus">AP Calculus</option>
-                                        <option value="AP Statistics">AP Statistics*</option>
-                                        <option value="Integrated Math 1">Integrated Math 1</option>
-                                        <option value="Integrated Math 2">Integrated Math 2</option>
-                                        <option value="Integrated Math 3">Integrated Math 3</option>
-                                        <option value="Personal Business Finance">Personal Business Finance</option>
-                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="Advanced Algebra" title="Rigor: 2.5">Advanced Algebra</option>
+                                        <option value="AP Calculus" title="Rigor: 4">AP Calculus</option>
+                                        <option value="AP Statistics" title="Rigor: 3">AP Statistics*</option>
+                                        <option value="Integrated Math 1" title="Rigor: 2.5">Integrated Math 1</option>
+                                        <option value="Integrated Math 2" title="Rigor: 3">Integrated Math 2</option>
+                                        <option value="Integrated Math 3" title="Rigor: 2.5">Integrated Math 3</option>
+                                        <option value="Personal Business Finance" title="Rigor: 1.5">Personal Business Finance</option>
+                                        <option value="Pre-Calculus" title="Rigor: 2.5">Pre-Calculus</option>
                                         <option value="other math">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Science -------">
-                                        <option value="AP Biology">AP Biology*</option>
-                                        <option value="AP Chemistry">AP Chemistry</option>
-                                        <option value="AP Environmental Science">AP Environmental Science*</option>
-                                        <option value="AP Physics">AP Physics*</option>
-                                        <option value="Biology">Biology</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Honors Biology">Honors Biology</option>
-                                        <option value="Honors Chemistry">Honors Chemistry</option>
-                                        <option value="Physics">Physics</option>
+                                        <option value="Advanced Medical Biotechnology" title="Rigor: 2">Advanced Medical Biotechnology</option>
+                                        <option value="AP Biology" title="Rigor: 4">AP Biology*</option>
+                                        <option value="AP Chemistry" title="Rigor: 3.5">AP Chemistry</option>
+                                        <option value="AP Environmental Science" title="Rigor: 3">AP Environmental Science*</option>
+                                        <option value="AP Physics 1" title="Rigor: 3">AP Physics 1*</option>
+                                        <option value="Biology" title="Rigor: 2.5">Biology</option>
+                                        <option value="Chemistry" title="Rigor: 3">Chemistry</option>
+                                        <option value="Honors Chemistry" title="Rigor: 3">Honors Chemistry</option>
+                                        <option value="Human Anatomy and Physiology" title="Rigor: 3.5">Human Anatomy and Physiology</option>
+                                        <option value="Medical Biotechnology" title="Rigor: 2">Medical Biotechnology</option>
+                                        <option value="Physics" title="Rigor: 2.5">Physics</option>
                                         <option value="other science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Social Studies -------">
-                                        <option value="AP Government">AP Government</option>
-                                        <option value="AP Human Geography">AP Human Geography</option>
-                                        <option value="AP Psychology">AP Psychology</option>
-                                        <option value="AP US History">AP US History</option>
-                                        <option value="AP World History">AP World History</option>
-                                        <option value="Government/Economics">Government/Economics</option>
-                                        <option value="US History">US History</option>
-                                        <option value="World Cultures">World Cultures</option>
-                                        <option value="World Geography">World Geography</option>
+                                        <option value="AP Government" title="Rigor: 3">AP Government</option>
+                                        <option value="AP Human Geography" title="Rigor: 3">AP Human Geography</option>
+                                        <option value="AP Psychology" title="Rigor: 3">AP Psychology</option>
+                                        <option value="AP US History" title="Rigor: 3">AP US History*</option>
+                                        <option value="AP World History" title="Rigor: 3">AP World History</option>
+                                        <option value="Government/Economics" title="Rigor: 2.5">Government/Economics</option>
+                                        <option value="US History" title="Rigor: 2">US History</option>
+                                        <option value="World Cultures" title="Rigor: 2.5">World Cultures</option>
                                         <option value="other social science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- English -------">
-                                        <option value="AP Language">AP Language*</option>
-                                        <option value="AP Literature">AP Literature*</option>
-                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
-                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
-                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
-                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
-                                        <option value="Honors English 1">Honors English 1*</option>
-                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="AP Language" title="Rigor: 3">AP Language*</option>
+                                        <option value="AP Literature" title="Rigor: 3.5">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)" title="Rigor: 2.5">CSU ERWC (12th)</option>
+                                        <option value="English 2 (10th grade)" title="Rigor: 2.5">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)" title="Rigor: 2">English 3 (11th grade)</option>
+                                        <option value="Honors English 1" title="Rigor: 3">Honors English 1*</option>
+                                        <option value="Honors English 2" title="Rigor: 3">Honors English 2*</option>
                                         <option value="other english">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- World Languages -------">
-                                        <option value="AP French">AP French*</option>
-                                        <option value="AP Spanish">AP Spanish*</option>
-                                        <option value="French 1">French 1</option>
-                                        <option value="French 2">French 2</option>
-                                        <option value="French 3">French 3</option>
-                                        <option value="French 4">French 4</option>
-                                        <option value="Spanish 1">Spanish 1</option>
-                                        <option value="Spanish 2">Spanish 2</option>
-                                        <option value="Spanish 3">Spanish 3</option>
-                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="French 1" title="Rigor: 2.5">French 1</option>
+                                        <option value="French 2" title="Rigor: 3">French 2</option>
+                                        <option value="French 3" title="Rigor: 3">French 3</option>
+                                        <option value="French 4" title="Rigor: 3">French 4</option>
+                                        <option value="Spanish 1" title="Rigor: 3">Spanish 1</option>
+                                        <option value="Spanish 2" title="Rigor: 3">Spanish 2</option>
+                                        <option value="Spanish 3" title="Rigor: 3">Spanish 3</option>
+                                        <option value="Spanish 4" title="Rigor: 4">Spanish 4</option>
                                         <option value="other language">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- CTE -------">
-                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
-                                        <option value="Animation">Animation</option>
-                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
-                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
-                                        <option value="Careers with Children">Careers with Children</option>
-                                        <option value="Child Development">Child Development</option>
-                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
-                                        <option value="Human Body Systems">Human Body Systems</option>
-                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
-                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
-                                        <option value="Principles of Biomed">Principles of Biomed</option>
-                                        <option value="Principles of Engineering">Principles of Engineering</option>
-                                        <option value="Multimedia Production">Multimedia Production</option>
-                                        <option value="Video Production">Video Production</option>
+                                        <option value="3D Design 1" title="Rigor: 2.5">3D Design 1</option>
+                                        <option value="Advanced Graphic Communications" title="Rigor: 1.5">Advanced Graphic Communications</option>
+                                        <option value="Advanced Production Management" title="Rigor: 2">Advanced Production Management</option>
+                                        <option value="Animation 1" title="Rigor: 2">Animation 1</option>
+                                        <option value="Animation 2" title="Rigor: 2.5">Animation 2</option>
+                                        <option value="AP Comp Sci A" title="Rigor: 2.5">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles" title="Rigor: 2">AP Computer Science Principles</option>
+                                        <option value="Careers with Children" title="Rigor: 1.5">Careers with Children</option>
+                                        <option value="Child Development" title="Rigor: 1.5">Child Development and Guidance</option>
+                                        <option value="Develop Psychology of Children" title="Rigor: 1">Develop Psychology of Children</option>
+                                        <option value="Intro to Engineering" title="Rigor: 2.5">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology" title="Rigor: 1">Intro to Kinesiology</option>
+                                        <option value="Planning Algorithms Using Python" title="Rigor: 2.5">Planning Algorithms Using Python</option>
+                                        <option value="Principles of Engineering" title="Rigor: 3">Principles of Engineering</option>
+                                        <option value="Multimedia Production" title="Rigor: 2">Multimedia Production</option>
+                                        <option value="Video Production 1-2" title="Rigor: 1.5">Video Production 1-2</option>
                                         <option value="other cte">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- VAPA -------">
-                                        <option value="AP Studio Art">AP Studio Art*</option>
-                                        <option value="Art and New Media">Art and New Media</option>
-                                        <option value="Ceramics">Ceramics</option>
-                                        <option value="CME">CME</option>
-                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
-                                        <option value="Drama">Drama</option>
-                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
-                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
-                                        <option value="Fine Art Photo">Fine Art Photo</option>
-                                        <option value="Guitar">Guitar</option>
-                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="Advanced Guitar" title="Rigor: 2">Advanced Guitar</option>
+                                        <option value="AP Drawing" title="Rigor: 2.5">AP Drawing*</option>
+                                        <option value="AP Studio Art" title="Rigor: 2">AP Studio Art*</option>
+                                        <option value="Ceramics" title="Rigor: 1">Ceramics and Sculpture</option>
+                                        <option value="CME" title="Rigor: 1.5">CME</option>
+                                        <option value="Concert Band" title="Rigor: 1.5">Concert Band</option>
+                                        <option value="Concert Choir" title="Rigor: 1">Concert Choir</option>
+                                        <option value="Drama" title="Rigor: 1.5">Drama</option>
+                                        <option value="Drawing and Painting 1" title="Rigor: 2">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2" title="Rigor: 2">Drawing and Painting 2</option>
+                                        <option value="Drawing and Painting 3" title="Rigor: 1.5">Drawing and Painting 3</option>
+                                        <option value="Fine Art Photo" title="Rigor: 1.5">Fine Art Photo</option>
+                                        <option value="Guitar" title="Rigor: 1.5">Guitar (All Levels)</option>
+                                        <option value="Orchestra" title="Rigor: 1">Orchestra</option>   
                                         <option value="other vapa">Other</option>
                                     </optgroup>
                                     
                                     <optgroup label="------- Electives -------">
-                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
-                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
-                                        <option value="Driver’s Ed">Driver’s Ed</option>
-                                        <option value="Forensics">Forensics</option>
-                                        <option value="Health">Health</option>
-                                        <option value="Peer Leadership">Peer Leadership</option>
-                                        <option value="SAT Prep">SAT Prep</option>
-                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
-                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
-                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
-                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="Community Service and Leadership" title="Rigor: 1.5">Community Service and Leadership</option>
+                                        <option value="Creative Writing" title="Rigor: 3">Creative Writing</option>
+                                        <option value="Critical Approaches to Cinema" title="Rigor: 1.5">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed" title="Rigor: 1.5">Driver’s Ed</option>
+                                        <option value="Forensics" title="Rigor: 2">Forensics</option>
+                                        <option value="Health" title="Rigor: 1.5">Health</option>
+                                        <option value="Humanities (AcaDeca)" title="Rigor: 2.5">Humanities (AcaDeca)</option>
+                                        <option value="Personal Startegic Planning" title="Rigor: 1.5">Personal Strategic Planning</option>
+                                        <option value="Science Fiction as Literature" title="Rigor: 1.5">Science Fiction as Literature</option>
+                                        <option value="Sociology" title="Rigor: 1.5">Sociology</option>
+                                        <option value="Speech and Debate 1" title="Rigor: 2">Speech and Debate 1</option>>
+                                        <option value="Student Government" title="Rigor: 2.5">Student Government</option>
+                                        <option value="Teacher Assistant" title="Rigor: 1">Teacher Assistant</option>
+                                        <option value="Yearbook" title="Rigor: 2">Yearbook</option>
                                         <option value="other elective">Other</option>
                                     </optgroup>
                             </select>
@@ -401,114 +413,120 @@
                             <select name="homeworkHours" id="homeworkHours3">
                                 <option value=" "> </option>
                                     <optgroup label="------ Mathematics ------">
-                                        <option value="Advanced Algebra">Advanced Algebra</option>
-                                        <option value="AP Calculus">AP Calculus</option>
-                                        <option value="AP Statistics">AP Statistics*</option>
-                                        <option value="Integrated Math 1">Integrated Math 1</option>
-                                        <option value="Integrated Math 2">Integrated Math 2</option>
-                                        <option value="Integrated Math 3">Integrated Math 3</option>
-                                        <option value="Personal Business Finance">Personal Business Finance</option>
-                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="Advanced Algebra" title="Rigor: 2.5">Advanced Algebra</option>
+                                        <option value="AP Calculus" title="Rigor: 4">AP Calculus</option>
+                                        <option value="AP Statistics" title="Rigor: 3">AP Statistics*</option>
+                                        <option value="Integrated Math 1" title="Rigor: 2.5">Integrated Math 1</option>
+                                        <option value="Integrated Math 2" title="Rigor: 3">Integrated Math 2</option>
+                                        <option value="Integrated Math 3" title="Rigor: 2.5">Integrated Math 3</option>
+                                        <option value="Personal Business Finance" title="Rigor: 1.5">Personal Business Finance</option>
+                                        <option value="Pre-Calculus" title="Rigor: 2.5">Pre-Calculus</option>
                                         <option value="other math">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Science -------">
-                                        <option value="AP Biology">AP Biology*</option>
-                                        <option value="AP Chemistry">AP Chemistry</option>
-                                        <option value="AP Environmental Science">AP Environmental Science*</option>
-                                        <option value="AP Physics">AP Physics*</option>
-                                        <option value="Biology">Biology</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Honors Biology">Honors Biology</option>
-                                        <option value="Honors Chemistry">Honors Chemistry</option>
-                                        <option value="Physics">Physics</option>
+                                        <option value="Advanced Medical Biotechnology" title="Rigor: 2">Advanced Medical Biotechnology</option>
+                                        <option value="AP Biology" title="Rigor: 4">AP Biology*</option>
+                                        <option value="AP Chemistry" title="Rigor: 3.5">AP Chemistry</option>
+                                        <option value="AP Environmental Science" title="Rigor: 3">AP Environmental Science*</option>
+                                        <option value="AP Physics 1" title="Rigor: 3">AP Physics 1*</option>
+                                        <option value="Biology" title="Rigor: 2.5">Biology</option>
+                                        <option value="Chemistry" title="Rigor: 3">Chemistry</option>
+                                        <option value="Honors Chemistry" title="Rigor: 3">Honors Chemistry</option>
+                                        <option value="Human Anatomy and Physiology" title="Rigor: 3.5">Human Anatomy and Physiology</option>
+                                        <option value="Medical Biotechnology" title="Rigor: 2">Medical Biotechnology</option>
+                                        <option value="Physics" title="Rigor: 2.5">Physics</option>
                                         <option value="other science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Social Studies -------">
-                                        <option value="AP Government">AP Government</option>
-                                        <option value="AP Human Geography">AP Human Geography</option>
-                                        <option value="AP Psychology">AP Psychology</option>
-                                        <option value="AP US History">AP US History</option>
-                                        <option value="AP World History">AP World History</option>
-                                        <option value="Government/Economics">Government/Economics</option>
-                                        <option value="US History">US History</option>
-                                        <option value="World Cultures">World Cultures</option>
-                                        <option value="World Geography">World Geography</option>
+                                        <option value="AP Government" title="Rigor: 3">AP Government</option>
+                                        <option value="AP Human Geography" title="Rigor: 3">AP Human Geography</option>
+                                        <option value="AP Psychology" title="Rigor: 3">AP Psychology</option>
+                                        <option value="AP US History" title="Rigor: 3">AP US History*</option>
+                                        <option value="AP World History" title="Rigor: 3">AP World History</option>
+                                        <option value="Government/Economics" title="Rigor: 2.5">Government/Economics</option>
+                                        <option value="US History" title="Rigor: 2">US History</option>
+                                        <option value="World Cultures" title="Rigor: 2.5">World Cultures</option>
                                         <option value="other social science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- English -------">
-                                        <option value="AP Language">AP Language*</option>
-                                        <option value="AP Literature">AP Literature*</option>
-                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
-                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
-                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
-                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
-                                        <option value="Honors English 1">Honors English 1*</option>
-                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="AP Language" title="Rigor: 3">AP Language*</option>
+                                        <option value="AP Literature" title="Rigor: 3.5">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)" title="Rigor: 2.5">CSU ERWC (12th)</option>
+                                        <option value="English 2 (10th grade)" title="Rigor: 2.5">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)" title="Rigor: 2">English 3 (11th grade)</option>
+                                        <option value="Honors English 1" title="Rigor: 3">Honors English 1*</option>
+                                        <option value="Honors English 2" title="Rigor: 3">Honors English 2*</option>
                                         <option value="other english">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- World Languages -------">
-                                        <option value="AP French">AP French*</option>
-                                        <option value="AP Spanish">AP Spanish*</option>
-                                        <option value="French 1">French 1</option>
-                                        <option value="French 2">French 2</option>
-                                        <option value="French 3">French 3</option>
-                                        <option value="French 4">French 4</option>
-                                        <option value="Spanish 1">Spanish 1</option>
-                                        <option value="Spanish 2">Spanish 2</option>
-                                        <option value="Spanish 3">Spanish 3</option>
-                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="French 1" title="Rigor: 2.5">French 1</option>
+                                        <option value="French 2" title="Rigor: 3">French 2</option>
+                                        <option value="French 3" title="Rigor: 3">French 3</option>
+                                        <option value="French 4" title="Rigor: 3">French 4</option>
+                                        <option value="Spanish 1" title="Rigor: 3">Spanish 1</option>
+                                        <option value="Spanish 2" title="Rigor: 3">Spanish 2</option>
+                                        <option value="Spanish 3" title="Rigor: 3">Spanish 3</option>
+                                        <option value="Spanish 4" title="Rigor: 4">Spanish 4</option>
                                         <option value="other language">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- CTE -------">
-                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
-                                        <option value="Animation">Animation</option>
-                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
-                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
-                                        <option value="Careers with Children">Careers with Children</option>
-                                        <option value="Child Development">Child Development</option>
-                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
-                                        <option value="Human Body Systems">Human Body Systems</option>
-                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
-                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
-                                        <option value="Principles of Biomed">Principles of Biomed</option>
-                                        <option value="Principles of Engineering">Principles of Engineering</option>
-                                        <option value="Multimedia Production">Multimedia Production</option>
-                                        <option value="Video Production">Video Production</option>
+                                        <option value="3D Design 1" title="Rigor: 2.5">3D Design 1</option>
+                                        <option value="Advanced Graphic Communications" title="Rigor: 1.5">Advanced Graphic Communications</option>
+                                        <option value="Advanced Production Management" title="Rigor: 2">Advanced Production Management</option>
+                                        <option value="Animation 1" title="Rigor: 2">Animation 1</option>
+                                        <option value="Animation 2" title="Rigor: 2.5">Animation 2</option>
+                                        <option value="AP Comp Sci A" title="Rigor: 2.5">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles" title="Rigor: 2">AP Computer Science Principles</option>
+                                        <option value="Careers with Children" title="Rigor: 1.5">Careers with Children</option>
+                                        <option value="Child Development" title="Rigor: 1.5">Child Development and Guidance</option>
+                                        <option value="Develop Psychology of Children" title="Rigor: 1">Develop Psychology of Children</option>
+                                        <option value="Intro to Engineering" title="Rigor: 2.5">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology" title="Rigor: 1">Intro to Kinesiology</option>
+                                        <option value="Planning Algorithms Using Python" title="Rigor: 2.5">Planning Algorithms Using Python</option>
+                                        <option value="Principles of Engineering" title="Rigor: 3">Principles of Engineering</option>
+                                        <option value="Multimedia Production" title="Rigor: 2">Multimedia Production</option>
+                                        <option value="Video Production 1-2" title="Rigor: 1.5">Video Production 1-2</option>
                                         <option value="other cte">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- VAPA -------">
-                                        <option value="AP Studio Art">AP Studio Art*</option>
-                                        <option value="Art and New Media">Art and New Media</option>
-                                        <option value="Ceramics">Ceramics</option>
-                                        <option value="CME">CME</option>
-                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
-                                        <option value="Drama">Drama</option>
-                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
-                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
-                                        <option value="Fine Art Photo">Fine Art Photo</option>
-                                        <option value="Guitar">Guitar</option>
-                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="Advanced Guitar" title="Rigor: 2">Advanced Guitar</option>
+                                        <option value="AP Drawing" title="Rigor: 2.5">AP Drawing*</option>
+                                        <option value="AP Studio Art" title="Rigor: 2">AP Studio Art*</option>
+                                        <option value="Ceramics" title="Rigor: 1">Ceramics and Sculpture</option>
+                                        <option value="CME" title="Rigor: 1.5">CME</option>
+                                        <option value="Concert Band" title="Rigor: 1.5">Concert Band</option>
+                                        <option value="Concert Choir" title="Rigor: 1">Concert Choir</option>
+                                        <option value="Drama" title="Rigor: 1.5">Drama</option>
+                                        <option value="Drawing and Painting 1" title="Rigor: 2">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2" title="Rigor: 2">Drawing and Painting 2</option>
+                                        <option value="Drawing and Painting 3" title="Rigor: 1.5">Drawing and Painting 3</option>
+                                        <option value="Fine Art Photo" title="Rigor: 1.5">Fine Art Photo</option>
+                                        <option value="Guitar" title="Rigor: 1.5">Guitar (All Levels)</option>
+                                        <option value="Orchestra" title="Rigor: 1">Orchestra</option>   
                                         <option value="other vapa">Other</option>
                                     </optgroup>
                                     
                                     <optgroup label="------- Electives -------">
-                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
-                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
-                                        <option value="Driver’s Ed">Driver’s Ed</option>
-                                        <option value="Forensics">Forensics</option>
-                                        <option value="Health">Health</option>
-                                        <option value="Peer Leadership">Peer Leadership</option>
-                                        <option value="SAT Prep">SAT Prep</option>
-                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
-                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
-                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
-                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="Community Service and Leadership" title="Rigor: 1.5">Community Service and Leadership</option>
+                                        <option value="Creative Writing" title="Rigor: 3">Creative Writing</option>
+                                        <option value="Critical Approaches to Cinema" title="Rigor: 1.5">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed" title="Rigor: 1.5">Driver’s Ed</option>
+                                        <option value="Forensics" title="Rigor: 2">Forensics</option>
+                                        <option value="Health" title="Rigor: 1.5">Health</option>
+                                        <option value="Humanities (AcaDeca)" title="Rigor: 2.5">Humanities (AcaDeca)</option>
+                                        <option value="Personal Startegic Planning" title="Rigor: 1.5">Personal Strategic Planning</option>
+                                        <option value="Science Fiction as Literature" title="Rigor: 1.5">Science Fiction as Literature</option>
+                                        <option value="Sociology" title="Rigor: 1.5">Sociology</option>
+                                        <option value="Speech and Debate 1" title="Rigor: 2">Speech and Debate 1</option>>
+                                        <option value="Student Government" title="Rigor: 2.5">Student Government</option>
+                                        <option value="Teacher Assistant" title="Rigor: 1">Teacher Assistant</option>
+                                        <option value="Yearbook" title="Rigor: 2">Yearbook</option>
                                         <option value="other elective">Other</option>
                                     </optgroup>
                             </select>
@@ -536,114 +554,120 @@
                             <select name="homeworkHours" id="homeworkHours4">
                                 <option value=" "> </option>
                                     <optgroup label="------ Mathematics ------">
-                                        <option value="Advanced Algebra">Advanced Algebra</option>
-                                        <option value="AP Calculus">AP Calculus</option>
-                                        <option value="AP Statistics">AP Statistics*</option>
-                                        <option value="Integrated Math 1">Integrated Math 1</option>
-                                        <option value="Integrated Math 2">Integrated Math 2</option>
-                                        <option value="Integrated Math 3">Integrated Math 3</option>
-                                        <option value="Personal Business Finance">Personal Business Finance</option>
-                                        <option value="Pre-Calculus">Pre-Calculus</option>
+                                        <option value="Advanced Algebra" title="Rigor: 2.5">Advanced Algebra</option>
+                                        <option value="AP Calculus" title="Rigor: 4">AP Calculus</option>
+                                        <option value="AP Statistics" title="Rigor: 3">AP Statistics*</option>
+                                        <option value="Integrated Math 1" title="Rigor: 2.5">Integrated Math 1</option>
+                                        <option value="Integrated Math 2" title="Rigor: 3">Integrated Math 2</option>
+                                        <option value="Integrated Math 3" title="Rigor: 2.5">Integrated Math 3</option>
+                                        <option value="Personal Business Finance" title="Rigor: 1.5">Personal Business Finance</option>
+                                        <option value="Pre-Calculus" title="Rigor: 2.5">Pre-Calculus</option>
                                         <option value="other math">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Science -------">
-                                        <option value="AP Biology">AP Biology*</option>
-                                        <option value="AP Chemistry">AP Chemistry</option>
-                                        <option value="AP Environmental Science">AP Environmental Science*</option>
-                                        <option value="AP Physics">AP Physics*</option>
-                                        <option value="Biology">Biology</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Honors Biology">Honors Biology</option>
-                                        <option value="Honors Chemistry">Honors Chemistry</option>
-                                        <option value="Physics">Physics</option>
+                                        <option value="Advanced Medical Biotechnology" title="Rigor: 2">Advanced Medical Biotechnology</option>
+                                        <option value="AP Biology" title="Rigor: 4">AP Biology*</option>
+                                        <option value="AP Chemistry" title="Rigor: 3.5">AP Chemistry</option>
+                                        <option value="AP Environmental Science" title="Rigor: 3">AP Environmental Science*</option>
+                                        <option value="AP Physics 1" title="Rigor: 3">AP Physics 1*</option>
+                                        <option value="Biology" title="Rigor: 2.5">Biology</option>
+                                        <option value="Chemistry" title="Rigor: 3">Chemistry</option>
+                                        <option value="Honors Chemistry" title="Rigor: 3">Honors Chemistry</option>
+                                        <option value="Human Anatomy and Physiology" title="Rigor: 3.5">Human Anatomy and Physiology</option>
+                                        <option value="Medical Biotechnology" title="Rigor: 2">Medical Biotechnology</option>
+                                        <option value="Physics" title="Rigor: 2.5">Physics</option>
                                         <option value="other science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- Social Studies -------">
-                                        <option value="AP Government">AP Government</option>
-                                        <option value="AP Human Geography">AP Human Geography</option>
-                                        <option value="AP Psychology">AP Psychology</option>
-                                        <option value="AP US History">AP US History</option>
-                                        <option value="AP World History">AP World History</option>
-                                        <option value="Government/Economics">Government/Economics</option>
-                                        <option value="US History">US History</option>
-                                        <option value="World Cultures">World Cultures</option>
-                                        <option value="World Geography">World Geography</option>
+                                        <option value="AP Government" title="Rigor: 3">AP Government</option>
+                                        <option value="AP Human Geography" title="Rigor: 3">AP Human Geography</option>
+                                        <option value="AP Psychology" title="Rigor: 3">AP Psychology</option>
+                                        <option value="AP US History" title="Rigor: 3">AP US History*</option>
+                                        <option value="AP World History" title="Rigor: 3">AP World History</option>
+                                        <option value="Government/Economics" title="Rigor: 2.5">Government/Economics</option>
+                                        <option value="US History" title="Rigor: 2">US History</option>
+                                        <option value="World Cultures" title="Rigor: 2.5">World Cultures</option>
                                         <option value="other social science">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- English -------">
-                                        <option value="AP Language">AP Language*</option>
-                                        <option value="AP Literature">AP Literature*</option>
-                                        <option value="CSU ERWC (12th)">CSU ERWC (12th)</option>
-                                        <option value="English 1 (9th grade)">English 1 (9th grade)</option>
-                                        <option value="English 2 (10th grade)">English 2 (10th grade)</option>
-                                        <option value="English 3 (11th grade)">English 3 (11th grade)</option>
-                                        <option value="Honors English 1">Honors English 1*</option>
-                                        <option value="Honors English 2">Honors English 2*</option>
+                                        <option value="AP Language" title="Rigor: 3">AP Language*</option>
+                                        <option value="AP Literature" title="Rigor: 3.5">AP Literature*</option>
+                                        <option value="CSU ERWC (12th)" title="Rigor: 2.5">CSU ERWC (12th)</option>
+                                        <option value="English 2 (10th grade)" title="Rigor: 2.5">English 2 (10th grade)</option>
+                                        <option value="English 3 (11th grade)" title="Rigor: 2">English 3 (11th grade)</option>
+                                        <option value="Honors English 1" title="Rigor: 3">Honors English 1*</option>
+                                        <option value="Honors English 2" title="Rigor: 3">Honors English 2*</option>
                                         <option value="other english">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- World Languages -------">
-                                        <option value="AP French">AP French*</option>
-                                        <option value="AP Spanish">AP Spanish*</option>
-                                        <option value="French 1">French 1</option>
-                                        <option value="French 2">French 2</option>
-                                        <option value="French 3">French 3</option>
-                                        <option value="French 4">French 4</option>
-                                        <option value="Spanish 1">Spanish 1</option>
-                                        <option value="Spanish 2">Spanish 2</option>
-                                        <option value="Spanish 3">Spanish 3</option>
-                                        <option value="Spanish 4">Spanish 4</option>
+                                        <option value="French 1" title="Rigor: 2.5">French 1</option>
+                                        <option value="French 2" title="Rigor: 3">French 2</option>
+                                        <option value="French 3" title="Rigor: 3">French 3</option>
+                                        <option value="French 4" title="Rigor: 3">French 4</option>
+                                        <option value="Spanish 1" title="Rigor: 3">Spanish 1</option>
+                                        <option value="Spanish 2" title="Rigor: 3">Spanish 2</option>
+                                        <option value="Spanish 3" title="Rigor: 3">Spanish 3</option>
+                                        <option value="Spanish 4" title="Rigor: 4">Spanish 4</option>
                                         <option value="other language">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- CTE -------">
-                                        <option value="Aerospace Engineering">Aerospace Engineering</option>
-                                        <option value="Animation">Animation</option>
-                                        <option value="AP Comp Sci A">AP Computer Science A*</option>
-                                        <option value="AP Comp Sci Principles">AP Computer Science Principles</option>
-                                        <option value="Careers with Children">Careers with Children</option>
-                                        <option value="Child Development">Child Development</option>
-                                        <option value="Develop Psychology of Children">Develop Psychology of Children</option>
-                                        <option value="Human Body Systems">Human Body Systems</option>
-                                        <option value="Intro to Engineering">Intro to Engineering Design</option>
-                                        <option value="Intro to Kinesiology">Intro to Kinesiology</option>
-                                        <option value="Principles of Biomed">Principles of Biomed</option>
-                                        <option value="Principles of Engineering">Principles of Engineering</option>
-                                        <option value="Multimedia Production">Multimedia Production</option>
-                                        <option value="Video Production">Video Production</option>
+                                        <option value="3D Design 1" title="Rigor: 2.5">3D Design 1</option>
+                                        <option value="Advanced Graphic Communications" title="Rigor: 1.5">Advanced Graphic Communications</option>
+                                        <option value="Advanced Production Management" title="Rigor: 2">Advanced Production Management</option>
+                                        <option value="Animation 1" title="Rigor: 2">Animation 1</option>
+                                        <option value="Animation 2" title="Rigor: 2.5">Animation 2</option>
+                                        <option value="AP Comp Sci A" title="Rigor: 2.5">AP Computer Science A*</option>
+                                        <option value="AP Comp Sci Principles" title="Rigor: 2">AP Computer Science Principles</option>
+                                        <option value="Careers with Children" title="Rigor: 1.5">Careers with Children</option>
+                                        <option value="Child Development" title="Rigor: 1.5">Child Development and Guidance</option>
+                                        <option value="Develop Psychology of Children" title="Rigor: 1">Develop Psychology of Children</option>
+                                        <option value="Intro to Engineering" title="Rigor: 2.5">Intro to Engineering Design</option>
+                                        <option value="Intro to Kinesiology" title="Rigor: 1">Intro to Kinesiology</option>
+                                        <option value="Planning Algorithms Using Python" title="Rigor: 2.5">Planning Algorithms Using Python</option>
+                                        <option value="Principles of Engineering" title="Rigor: 3">Principles of Engineering</option>
+                                        <option value="Multimedia Production" title="Rigor: 2">Multimedia Production</option>
+                                        <option value="Video Production 1-2" title="Rigor: 1.5">Video Production 1-2</option>
                                         <option value="other cte">Other</option>
                                     </optgroup>
 
                                     <optgroup label="------- VAPA -------">
-                                        <option value="AP Studio Art">AP Studio Art*</option>
-                                        <option value="Art and New Media">Art and New Media</option>
-                                        <option value="Ceramics">Ceramics</option>
-                                        <option value="CME">CME</option>
-                                        <option value="Concert Band/Choir">Concert Band/Choir</option>
-                                        <option value="Drama">Drama</option>
-                                        <option value="Drawing and Painting 1">Drawing and Painting 1</option>
-                                        <option value="Drawing and Painting 2">Drawing and Painting 2</option>
-                                        <option value="Fine Art Photo">Fine Art Photo</option>
-                                        <option value="Guitar">Guitar</option>
-                                        <option value="Orchestra">Orchestra</option>   
+                                        <option value="Advanced Guitar" title="Rigor: 2">Advanced Guitar</option>
+                                        <option value="AP Drawing" title="Rigor: 2.5">AP Drawing*</option>
+                                        <option value="AP Studio Art" title="Rigor: 2">AP Studio Art*</option>
+                                        <option value="Ceramics" title="Rigor: 1">Ceramics and Sculpture</option>
+                                        <option value="CME" title="Rigor: 1.5">CME</option>
+                                        <option value="Concert Band" title="Rigor: 1.5">Concert Band</option>
+                                        <option value="Concert Choir" title="Rigor: 1">Concert Choir</option>
+                                        <option value="Drama" title="Rigor: 1.5">Drama</option>
+                                        <option value="Drawing and Painting 1" title="Rigor: 2">Drawing and Painting 1</option>
+                                        <option value="Drawing and Painting 2" title="Rigor: 2">Drawing and Painting 2</option>
+                                        <option value="Drawing and Painting 3" title="Rigor: 1.5">Drawing and Painting 3</option>
+                                        <option value="Fine Art Photo" title="Rigor: 1.5">Fine Art Photo</option>
+                                        <option value="Guitar" title="Rigor: 1.5">Guitar (All Levels)</option>
+                                        <option value="Orchestra" title="Rigor: 1">Orchestra</option>   
                                         <option value="other vapa">Other</option>
                                     </optgroup>
                                     
                                     <optgroup label="------- Electives -------">
-                                        <option value="Community Service and Leadership">Community Service and Leadership</option>
-                                        <option value="Critical Approaches to Cinema">Critical Approaches to Cinema</option>
-                                        <option value="Driver’s Ed">Driver’s Ed</option>
-                                        <option value="Forensics">Forensics</option>
-                                        <option value="Health">Health</option>
-                                        <option value="Peer Leadership">Peer Leadership</option>
-                                        <option value="SAT Prep">SAT Prep</option>
-                                        <option value="Science Fiction as Literature">Science Fiction as Literature</option>
-                                        <option value="Speech and Debate 1">Speech and Debate 1</option>
-                                        <option value="Speech and Debate 2">Speech and Debate 2</option>
-                                        <option value="Teacher Assistant">Teacher Assistant</option>
+                                        <option value="Community Service and Leadership" title="Rigor: 1.5">Community Service and Leadership</option>
+                                        <option value="Creative Writing" title="Rigor: 3">Creative Writing</option>
+                                        <option value="Critical Approaches to Cinema" title="Rigor: 1.5">Critical Approaches to Cinema</option>
+                                        <option value="Driver’s Ed" title="Rigor: 1.5">Driver’s Ed</option>
+                                        <option value="Forensics" title="Rigor: 2">Forensics</option>
+                                        <option value="Health" title="Rigor: 1.5">Health</option>
+                                        <option value="Humanities (AcaDeca)" title="Rigor: 2.5">Humanities (AcaDeca)</option>
+                                        <option value="Personal Startegic Planning" title="Rigor: 1.5">Personal Strategic Planning</option>
+                                        <option value="Science Fiction as Literature" title="Rigor: 1.5">Science Fiction as Literature</option>
+                                        <option value="Sociology" title="Rigor: 1.5">Sociology</option>
+                                        <option value="Speech and Debate 1" title="Rigor: 2">Speech and Debate 1</option>>
+                                        <option value="Student Government" title="Rigor: 2.5">Student Government</option>
+                                        <option value="Teacher Assistant" title="Rigor: 1">Teacher Assistant</option>
+                                        <option value="Yearbook" title="Rigor: 2">Yearbook</option>
                                         <option value="other elective">Other</option>
                                     </optgroup>
                             </select>
